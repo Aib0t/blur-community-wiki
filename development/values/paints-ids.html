@@ -2,14 +2,339 @@
 title: Car paint IDs
 description: I want it purple!
 published: true
-date: 2021-03-16T10:56:35.377Z
+date: 2021-03-16T11:03:20.512Z
 tags: 
 editor: ckeditor
 dateCreated: 2021-03-16T10:44:54.684Z
 -->
 
-<p>Paints (internal name <span style="font-family:'Courier New', Courier, monospace;">VEH_MaterialPaint</span>) are stored in vehicles.bin and consists of many values:</p>
-<pre><code class="language-plaintext">    {
+<h1>Car paints.</h1>
+<p>Paints (internal name<span style="font-family:'Courier New', Courier, monospace;"><code>VEH_MaterialPaint</code></span>) are stored in <code>vehicles.bin</code> and consists of many values.</p>
+<p>Paints can be divided in 2 categories:</p>
+<ul>
+  <li>Basic (available from color picker)</li>
+  <li>Special and car-related</li>
+</ul>
+<p>Basic paints has distinctive names:</p>
+<ul>
+  <li>R2C5</li>
+</ul>
+<p>&nbsp;</p>
+<figure class="image"><img src="/assets/paints/blur_paints.png">
+  <figcaption>Paints schematic</figcaption>
+</figure>
+<p>&nbsp;</p>
+<figure class="image"><img src="/assets/paints/blur_2021_03_12_21_02_05_588.png"></figure>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Local ID: 0 | Name: R5C2a | Global id: 16461998 | HEX ID: ae30fb00</p>
+<p>Local ID: 1 | Name: P_R4C5a | Global id: 21278216 | HEX ID: 08ae4401</p>
+<p>Local ID: 3 | Name: Ford_MustangGTR_Stock | Global id: 44106748 | HEX ID: fc03a102</p>
+<p>Local ID: 4 | Name: R7C2a | Global id: 48441109 | HEX ID: 1527e302</p>
+<p>Local ID: 5 | Name: Yellow_Trophy | Global id: 51393837 | HEX ID: 2d351003</p>
+<p>Local ID: 6 | Name: R2C5a | Global id: 55153048 | HEX ID: 98914903</p>
+<p>Local ID: 7 | Name: C_R1C4a | Global id: 60428182 | HEX ID: 960f9a03</p>
+<p>Local ID: 9 | Name: Audi_R8V10_Stock | Global id: 92856200 | HEX ID: 88df8805</p>
+<p>Local ID: 10 | Name: M_R6C3a | Global id: 94608018 | HEX ID: 929aa305</p>
+<p>Local ID: 12 | Name: Lotus_ExigeCup260_Stock | Global id: 101008814 | HEX ID: ae450506</p>
+<p>Local ID: 13 | Name: P_R4C4a | Global id: 113667141 | HEX ID: 456cc606</p>
+<p>Local ID: 14 | Name: M_R5C2a | Global id: 150630324 | HEX ID: b46ffa08</p>
+<p>Local ID: 15 | Name: R2C3b | Global id: 157267909 | HEX ID: c5b75f09</p>
+<p>Local ID: 16 | Name: Metallic Silver | Global id: 183305506 | HEX ID: 2205ed0a</p>
+<p>Local ID: 17 | Name: R2C5b | Global id: 186734187 | HEX ID: 6b56210b</p>
+<p>Local ID: 18 | Name: Canal_Blue | Global id: 219352792 | HEX ID: d80e130d</p>
+<p>Local ID: 19 | Name: R3C1b | Global id: 222020373 | HEX ID: 15c33b0d</p>
+<p>Local ID: 20 | Name: R3C6b | Global id: 224397138 | HEX ID: 5207600d</p>
+<p>Local ID: 21 | Name: Corvette_C3_Drag | Global id: 233421997 | HEX ID: adbce90d</p>
+<p>Local ID: 22 | Name: R2C2c | Global id: 234786641 | HEX ID: 518ffe0d</p>
+<p>Local ID: 25 | Name: Silver | Global id: 245492949 | HEX ID: d5eca10e</p>
+<p>Local ID: 26 | Name: R5C6b | Global id: 248710527 | HEX ID: 7f05d30e</p>
+<p>Local ID: 27 | Name: C_R3C6a | Global id: 249230730 | HEX ID: 8af5da0e</p>
+<p>Local ID: 29 | Name: BMW_M3E92_Tuner | Global id: 295801773 | HEX ID: ad93a111</p>
+<p>Local ID: 31 | Name: P_R4C3a | Global id: 326597497 | HEX ID: 797b7713</p>
+<p>Local ID: 32 | Name: R5C1c | Global id: 340574138 | HEX ID: babf4c14</p>
+<p>Local ID: 33 | Name: C_R7C2a | Global id: 345384251 | HEX ID: 3b259614</p>
+<p>Local ID: 35 | Name: ACSchnitzer_ACS1Coupe_Stock | Global id: 349371621 | HEX ID: e5fcd214</p>
+<p>Local ID: 36 | Name: Chevrolet_CamaroSS_Stock | Global id: 354272535 | HEX ID: 17c51d15</p>
+<p>Local ID: 37 | Name: Nissan_Navara_Rat | Global id: 356031361 | HEX ID: 819b3815</p>
+<p>Local ID: 39 | Name: R4C3c | Global id: 375843413 | HEX ID: 55ea6616</p>
+<p>Local ID: 40 | Name: Gloss Black | Global id: 378795532 | HEX ID: 0cf69316</p>
+<p>Local ID: 41 | Name: M_R5C5a | Global id: 438484537 | HEX ID: 39be221a</p>
+<p>Local ID: 43 | Name: R1C2c | Global id: 495442288 | HEX ID: 70d9871d</p>
+<p>Local ID: 44 | Name: R7C2b | Global id: 530599140 | HEX ID: e44ca01f</p>
+<p>Local ID: 45 | Name: Ford_F150_OffRoad | Global id: 532848985 | HEX ID: 59a1c21f</p>
+<p>Local ID: 46 | Name: P_R7C3a | Global id: 539723372 | HEX ID: 6c862b20</p>
+<p>Local ID: 47 | Name: R5C1a | Global id: 541987311 | HEX ID: ef114e20</p>
+<p>Local ID: 48 | Name: R4C1a | Global id: 575845763 | HEX ID: 83b55222</p>
+<p>Local ID: 49 | Name: R3C5a | Global id: 577325001 | HEX ID: c9476922</p>
+<p>Local ID: 50 | Name: Ford_FocusRS_Race | Global id: 591342049 | HEX ID: e1293f23</p>
+<p>Local ID: 51 | Name: Nissan_Navara_OffRoad | Global id: 593704400 | HEX ID: d0356323</p>
+<p>Local ID: 52 | Name: R3C1a | Global id: 601604519 | HEX ID: a7c1db23</p>
+<p>Local ID: 53 | Name: P_R6C3a | Global id: 606273879 | HEX ID: 57012324</p>
+<p>Local ID: 55 | Name: Dodge_Challenger_Race | Global id: 617802386 | HEX ID: 92ead224</p>
+<p>Local ID: 56 | Name: R7C1b | Global id: 623340632 | HEX ID: 586c2725</p>
+<p>Local ID: 58 | Name: BMW_X548MSport_Stock | Global id: 646286529 | HEX ID: c18c8526</p>
+<p>Local ID: 59 | Name: Dodge_ViperGTSR_Stock | Global id: 647342990 | HEX ID: 8eab9526</p>
+<p>Local ID: 60 | Name: P_R3C1a | Global id: 659684703 | HEX ID: 5ffd5127</p>
+<p>Local ID: 61 | Name: R3C5a | Global id: 673640165 | HEX ID: e5ee2628</p>
+<p>Local ID: 62 | Name: R5C3c | Global id: 677869043 | HEX ID: f3756728</p>
+<p>Local ID: 64 | Name: White | Global id: 698195502 | HEX ID: 2e9e9d29</p>
+<p>Local ID: 65 | Name: C_R5C4a | Global id: 740594492 | HEX ID: 3c93242c</p>
+<p>Local ID: 66 | Name: Gloss Black | Global id: 744194655 | HEX ID: 5f825b2c</p>
+<p>Local ID: 67 | Name: R2C2a | Global id: 753218383 | HEX ID: 4f33e52c</p>
+<p>Local ID: 69 | Name: Rin Gold | Global id: 768821401 | HEX ID: 9948d32d</p>
+<p>Local ID: 70 | Name: Ford_FocusRS_Stock | Global id: 776221995 | HEX ID: 2b35442e</p>
+<p>Local ID: 72 | Name: R4C4c | Global id: 793515364 | HEX ID: 64154c2f</p>
+<p>Local ID: 74 | Name: M_R5C4a | Global id: 828899185 | HEX ID: 71ff6731</p>
+<p>Local ID: 75 | Name: Canal_Blue | Global id: 862043444 | HEX ID: 34bd6133</p>
+<p>Local ID: 77 | Name: C_R2C1a | Global id: 873694302 | HEX ID: 5e841334</p>
+<p>Local ID: 78 | Name: P_R3C5a | Global id: 886493931 | HEX ID: ebd2d634</p>
+<p>Local ID: 79 | Name: R1C3c | Global id: 903460556 | HEX ID: ccb6d935</p>
+<p>Local ID: 80 | Name: R6C2b | Global id: 933890386 | HEX ID: 5209aa37</p>
+<p>Local ID: 82 | Name: R3C6c | Global id: 951251041 | HEX ID: 61f0b238</p>
+<p>Local ID: 83 | Name: C_R4C7a | Global id: 952049312 | HEX ID: a01ebf38</p>
+<p>Local ID: 85 | Name: Nissan_350Z_Drift | Global id: 1004541584 | HEX ID: 9016e03b</p>
+<p>Local ID: 86 | Name: Volkswagen_Beetle_Rat | Global id: 1008003988 | HEX ID: 94eb143c</p>
+<p>Local ID: 87 | Name: Metallic Silver | Global id: 1010701564 | HEX ID: fc143e3c</p>
+<p>Local ID: 88 | Name: R6C4c | Global id: 1016843034 | HEX ID: 1acb9b3c</p>
+<p>Local ID: 89 | Name: C_R1C2a | Global id: 1022221725 | HEX ID: 9ddded3c</p>
+<p>Local ID: 90 | Name: Default | Global id: 1031712113 | HEX ID: 71ad7e3d</p>
+<p>Local ID: 91 | Name: C_R2C2a | Global id: 1036557272 | HEX ID: d89bc83d</p>
+<p>Local ID: 92 | Name: P_R2C3a | Global id: 1057893369 | HEX ID: f92b0e3f</p>
+<p>Local ID: 93 | Name: R4C2c | Global id: 1076242648 | HEX ID: d8282640</p>
+<p>Local ID: 94 | Name: P_R5C6a | Global id: 1079471564 | HEX ID: cc6d5740</p>
+<p>Local ID: 97 | Name: M_R7C2a | Global id: 1105705669 | HEX ID: c5bae741</p>
+<p>Local ID: 98 | Name: P_R3C4a | Global id: 1113996748 | HEX ID: cc3d6642</p>
+<p>Local ID: 102 | Name: P_R7C2a | Global id: 1170819333 | HEX ID: 0549c945</p>
+<p>Local ID: 104 | Name: C_R7C1a | Global id: 1237128489 | HEX ID: 2915bd49</p>
+<p>Local ID: 105 | Name: Corvette_ZR1_Stock | Global id: 1261417790 | HEX ID: 3eb52f4b</p>
+<p>Local ID: 106 | Name: Dodge_Challenger_Stock | Global id: 1270555583 | HEX ID: bf23bb4b</p>
+<p>Local ID: 108 | Name: R3C4b | Global id: 1286680387 | HEX ID: 432fb14c</p>
+<p>Local ID: 110 | Name: Chevrolet_CamaroSS_Drag | Global id: 1311076593 | HEX ID: f170254e</p>
+<p>Local ID: 111 | Name: R1C2b | Global id: 1338651095 | HEX ID: d731ca4f</p>
+<p>Local ID: 115 | Name: R2C5a | Global id: 1405822581 | HEX ID: 7526cb53</p>
+<p>Local ID: 117 | Name: R2C1b | Global id: 1424315236 | HEX ID: 6453e554</p>
+<p>Local ID: 118 | Name: Volkswagen_Scirocco_24 | Global id: 1428404237 | HEX ID: 0db82355</p>
+<p>Local ID: 119 | Name: R4C5a | Global id: 1434892554 | HEX ID: 0ab98655</p>
+<p>Local ID: 120 | Name: R1C1c | Global id: 1443712827 | HEX ID: 3b4f0d56</p>
+<p>Local ID: 121 | Name: P_R3C6a | Global id: 1454644799 | HEX ID: 3f1eb456</p>
+<p>Local ID: 122 | Name: Very Green | Global id: 1467708706 | HEX ID: 22757b57</p>
+<p>Local ID: 123 | Name: R4C4a | Global id: 1478995075 | HEX ID: 83ac2758</p>
+<p>Local ID: 124 | Name: R5C2b | Global id: 1490929423 | HEX ID: 0fc7dd58</p>
+<p>Local ID: 125 | Name: Matte Rat | Global id: 1492180403 | HEX ID: b3ddf058</p>
+<p>Local ID: 127 | Name: M_R3C6a | Global id: 1515354886 | HEX ID: 067b525a</p>
+<p>Local ID: 131 | Name: R2C4c | Global id: 1593027896 | HEX ID: 38adf35e</p>
+<p>Local ID: 132 | Name: R7C1a | Global id: 1611610391 | HEX ID: 17390f60</p>
+<p>Local ID: 133 | Name: M_R6C4a | Global id: 1638891925 | HEX ID: 9581af61</p>
+<p>Local ID: 134 | Name: P_R6C1a | Global id: 1643491648 | HEX ID: 40b1f561</p>
+<p>Local ID: 135 | Name: Chrome | Global id: 1648078178 | HEX ID: 62ad3b62</p>
+<p>Local ID: 136 | Name: M_R4C1a | Global id: 1652101272 | HEX ID: 98107962</p>
+<p>Local ID: 137 | Name: C_R3C4a | Global id: 1655299804 | HEX ID: dcdea962</p>
+<p>Local ID: 138 | Name: M_R4C6a | Global id: 1657657736 | HEX ID: 88d9cd62</p>
+<p>Local ID: 139 | Name: R4C2b | Global id: 1664866664 | HEX ID: 68d93b63</p>
+<p>Local ID: 140 | Name: P_R3C3a | Global id: 1672608462 | HEX ID: cefab163</p>
+<p>Local ID: 141 | Name: P_R4C6a | Global id: 1675602413 | HEX ID: eda9df63</p>
+<p>Local ID: 142 | Name: R6C2a | Global id: 1690207240 | HEX ID: 0884be64</p>
+<p>Local ID: 143 | Name: M_R7C4a | Global id: 1702026550 | HEX ID: 36dd7265</p>
+<p>Local ID: 144 | Name: C_R4C4a | Global id: 1709356710 | HEX ID: a6b6e265</p>
+<p>Local ID: 145 | Name: R6C4b | Global id: 1713477686 | HEX ID: 36982166</p>
+<p>Local ID: 146 | Name: R2C5c | Global id: 1730330344 | HEX ID: e8be2267</p>
+<p>Local ID: 147 | Name: Ford_FR100_Stock | Global id: 1760668916 | HEX ID: f4acf168</p>
+<p>Local ID: 148 | Name: R3C1c | Global id: 1768831506 | HEX ID: 123a6e69</p>
+<p>Local ID: 150 | Name: R4C1c | Global id: 1784007497 | HEX ID: 49cb556a</p>
+<p>Local ID: 151 | Name: R3C4c | Global id: 1784206488 | HEX ID: 98d4586a</p>
+<p>Local ID: 153 | Name: C_R3C2a | Global id: 1814992984 | HEX ID: 58982e6c</p>
+<p>Local ID: 154 | Name: Volkswagen_Beetle_Rat | Global id: 1815546129 | HEX ID: 1109376c</p>
+<p>Local ID: 155 | Name: C_R4C3a | Global id: 1816800746 | HEX ID: ea2d4a6c</p>
+<p>Local ID: 156 | Name: R5C6c | Global id: 1824136480 | HEX ID: 201dba6c</p>
+<p>Local ID: 157 | Name: M_R5C6a | Global id: 1824506193 | HEX ID: 51c1bf6c</p>
+<p>Local ID: 158 | Name: R7C4b | Global id: 1856844600 | HEX ID: 3833ad6e</p>
+<p>Local ID: 159 | Name: R2C4a | Global id: 1871384621 | HEX ID: 2d108b6f</p>
+<p>Local ID: 162 | Name: Canal_Blue | Global id: 1887532478 | HEX ID: be758170</p>
+<p>Local ID: 164 | Name: Ford_MustangGTR_Stock | Global id: 1904320417 | HEX ID: a19f8171</p>
+<p>Local ID: 165 | Name: C_R3C1a | Global id: 1905055628 | HEX ID: 8cd78c71</p>
+<p>Local ID: 166 | Name: Dodge_Challenger_Stock | Global id: 1950313765 | HEX ID: 256d3f74</p>
+<p>Local ID: 167 | Name: R2C1a | Global id: 1968692274 | HEX ID: 32dc5775</p>
+<p>Local ID: 168 | Name: Metallic Gold | Global id: 2004687830 | HEX ID: d61b7d77</p>
+<p>Local ID: 169 | Name: R2C3c | Global id: 2028845115 | HEX ID: 3bb8ed78</p>
+<p>Local ID: 170 | Name: LandRover_LRX_Stock | Global id: 2032554606 | HEX ID: 6e522679</p>
+<p>Local ID: 172 | Name: Red/Orange Pearlescent | Global id: 2059479106 | HEX ID: 4228c17a</p>
+<p>Local ID: 173 | Name: R1C1b | Global id: 2071009029 | HEX ID: 0517717b</p>
+<p>Local ID: 174 | Name: R3C5c | Global id: 2097329241 | HEX ID: 59b4027d</p>
+<p>Local ID: 175 | Name: P_R5C5a | Global id: 2106155641 | HEX ID: 7962897d</p>
+<p>Local ID: 176 | Name: C_R5C5a | Global id: 2136262260 | HEX ID: 74c6547f</p>
+<p>Local ID: 179 | Name: Very Green | Global id: 2156384912 | HEX ID: 90d28780</p>
+<p>Local ID: 180 | Name: M_R4C4a | Global id: 2165574518 | HEX ID: 760b1481</p>
+<p>Local ID: 181 | Name: M_R3C1a | Global id: 2165871477 | HEX ID: 75931881</p>
+<p>Local ID: 184 | Name: R4C5c | Global id: 2177204996 | HEX ID: 0483c581</p>
+<p>Local ID: 185 | Name: Red | Global id: 2195169045 | HEX ID: 159fd782</p>
+<p>Local ID: 186 | Name: R4C6a | Global id: 2201985996 | HEX ID: cca33f83</p>
+<p>Local ID: 187 | Name: R4C3a | Global id: 2229994263 | HEX ID: 1703eb84</p>
+<p>Local ID: 188 | Name: Bronze | Global id: 2236007282 | HEX ID: 72c34685</p>
+<p>Local ID: 189 | Name: P_R7C4a | Global id: 2246359839 | HEX ID: 1fbbe485</p>
+<p>Local ID: 190 | Name: M_R2C3a | Global id: 2258317713 | HEX ID: 91319b86</p>
+<p>Local ID: 191 | Name: White | Global id: 2273500494 | HEX ID: 4edd8287</p>
+<p>Local ID: 192 | Name: M_R3C2a | Global id: 2297810781 | HEX ID: 5dcff588</p>
+<p>Local ID: 195 | Name: P_R4C1a | Global id: 2325199947 | HEX ID: 4bbc978a</p>
+<p>Local ID: 197 | Name: Mazda_RX8_Tuner | Global id: 2348015656 | HEX ID: 28e0f38b</p>
+<p>Local ID: 198 | Name: R6C2c | Global id: 2379373042 | HEX ID: f259d28d</p>
+<p>Local ID: 199 | Name: C_R6C5a | Global id: 2381325555 | HEX ID: f324f08d</p>
+<p>Local ID: 200 | Name: C_R2C4a | Global id: 2399215093 | HEX ID: f51d018f</p>
+<p>Local ID: 201 | Name: P_R2C1a | Global id: 2429037400 | HEX ID: 582bc890</p>
+<p>Local ID: 204 | Name: R7C4c | Global id: 2447333119 | HEX ID: ff56df91</p>
+<p>Local ID: 205 | Name: Metallic Silver | Global id: 2459621038 | HEX ID: aed69a92</p>
+<p>Local ID: 206 | Name: R5C2c | Global id: 2463354977 | HEX ID: 61d0d392</p>
+<p>Local ID: 207 | Name: R2C2b | Global id: 2465447396 | HEX ID: e4bdf392</p>
+<p>Local ID: 209 | Name: M_R3C5a | Global id: 2491869923 | HEX ID: e3ea8694</p>
+<p>Local ID: 210 | Name: R4C6c | Global id: 2511324713 | HEX ID: 29c6af95</p>
+<p>Local ID: 211 | Name: Ford_FR100_Stock | Global id: 2525526541 | HEX ID: 0d7a8896</p>
+<p>Local ID: 212 | Name: R6C3b | Global id: 2553169262 | HEX ID: 6e452e98</p>
+<p>Local ID: 213 | Name: P_R1C3a | Global id: 2554057472 | HEX ID: 00d33b98</p>
+<p>Local ID: 215 | Name: R4C1b | Global id: 2560479022 | HEX ID: 2ecf9d98</p>
+<p>Local ID: 216 | Name: Toyota_Supra_Smooth | Global id: 2563448035 | HEX ID: e31ccb98</p>
+<p>Local ID: 217 | Name: M_R5C3a | Global id: 2563587321 | HEX ID: f93ccd98</p>
+<p>Local ID: 218 | Name: BMW_1SeriesTii_Race | Global id: 2567487000 | HEX ID: 18be0899</p>
+<p>Local ID: 220 | Name: R6C1b | Global id: 2574865794 | HEX ID: 82557999</p>
+<p>Local ID: 221 | Name: C_R1C1a | Global id: 2577189321 | HEX ID: c9c99c99</p>
+<p>Local ID: 222 | Name: M_R2C1a | Global id: 2583853486 | HEX ID: ae79029a</p>
+<p>Local ID: 223 | Name: C_R3C3a | Global id: 2586211286 | HEX ID: d673269a</p>
+<p>Local ID: 224 | Name: C_R5C1a | Global id: 2607521293 | HEX ID: 0d9e6b9b</p>
+<p>Local ID: 225 | Name: BMW_M3E92_Drift | Global id: 2625618376 | HEX ID: c8c17f9c</p>
+<p>Local ID: 226 | Name: Green/Blue/Purple Pearlescent | Global id: 2627743531 | HEX ID: 2b2fa09c</p>
+<p>Local ID: 227 | Name: R7C1c | Global id: 2631587883 | HEX ID: 2bd8da9c</p>
+<p>Local ID: 228 | Name: R6C1c | Global id: 2639586846 | HEX ID: 1ee6549d</p>
+<p>Local ID: 229 | Name: R3C5b | Global id: 2644268744 | HEX ID: c8569c9d</p>
+<p>Local ID: 230 | Name: Yellow | Global id: 2649041895 | HEX ID: e72be59d</p>
+<p>Local ID: 231 | Name: M_R7C3a | Global id: 2657838161 | HEX ID: 51646b9e</p>
+<p>Local ID: 233 | Name: R1C1a | Global id: 2674733206 | HEX ID: 96306d9f</p>
+<p>Local ID: 234 | Name: R3C2c | Global id: 2701568292 | HEX ID: 24a906a1</p>
+<p>Local ID: 235 | Name: R3C3b | Global id: 2709695460 | HEX ID: e4ab82a1</p>
+<p>Local ID: 236 | Name: M_R2C4a | Global id: 2715477375 | HEX ID: 7fe5daa1</p>
+<p>Local ID: 237 | Name: Vauxhall_MonaroVXR_Drift | Global id: 2733276158 | HEX ID: fe7beaa2</p>
+<p>Local ID: 238 | Name: Volkswagen_GolfW12650_Stock | Global id: 2737042229 | HEX ID: 35f323a3</p>
+<p>Local ID: 239 | Name: C_R7C3a | Global id: 2738059853 | HEX ID: 4d7a33a3</p>
+<p>Local ID: 240 | Name: C_R5C6a | Global id: 2752013675 | HEX ID: 6b6508a4</p>
+<p>Local ID: 241 | Name: R5C5c | Global id: 2773132966 | HEX ID: a6a64aa5</p>
+<p>Local ID: 242 | Name: M_R5C1a | Global id: 2801994426 | HEX ID: ba0a03a7</p>
+<p>Local ID: 243 | Name: M_R6C5a | Global id: 2815763545 | HEX ID: 5924d5a7</p>
+<p>Local ID: 244 | Name: P_R2C1a | Global id: 2822741316 | HEX ID: 449d3fa8</p>
+<p>Local ID: 245 | Name: Corvette_C3_Race | Global id: 2827559290 | HEX ID: 7a2189a8</p>
+<p>Local ID: 246 | Name: P_R4C7a | Global id: 2838107881 | HEX ID: e9162aa9</p>
+<p>Local ID: 247 | Name: R5C4b | Global id: 2843710531 | HEX ID: 43947fa9</p>
+<p>Local ID: 248 | Name: P_R5C4a | Global id: 2849098796 | HEX ID: 2cccd1a9</p>
+<p>Local ID: 249 | Name: P_R2C5a | Global id: 2858281538 | HEX ID: 42ea5daa</p>
+<p>Local ID: 250 | Name: R5C1b | Global id: 2864033162 | HEX ID: 8aadb5aa</p>
+<p>Local ID: 252 | Name: C_R2C3a | Global id: 2879428357 | HEX ID: 0597a0ab</p>
+<p>Local ID: 253 | Name: Pueblo gold | Global id: 2881686201 | HEX ID: b90ac3ab</p>
+<p>Local ID: 254 | Name: R4C3b | Global id: 2885901957 | HEX ID: 855e03ac</p>
+<p>Local ID: 255 | Name: M_R4C3a | Global id: 2897798766 | HEX ID: 6ee6b8ac</p>
+<p>Local ID: 256 | Name: P_R5C2a | Global id: 2974311312 | HEX ID: 906348b1</p>
+<p>Local ID: 257 | Name: M_R1C4a | Global id: 2976320819 | HEX ID: 330d67b1</p>
+<p>Local ID: 258 | Name: R3C6a | Global id: 2986642357 | HEX ID: b58b04b2</p>
+<p>Local ID: 259 | Name: R6C5b | Global id: 2988878112 | HEX ID: 20a926b2</p>
+<p>Local ID: 260 | Name: C_R4C2a | Global id: 2996123793 | HEX ID: 913895b2</p>
+<p>Local ID: 261 | Name: C_R4C1a | Global id: 3008717652 | HEX ID: 546355b3</p>
+<p>Local ID: 262 | Name: R6C5c | Global id: 3014141144 | HEX ID: d824a8b3</p>
+<p>Local ID: 263 | Name: Metallic Silver | Global id: 3017158008 | HEX ID: 782dd6b3</p>
+<p>Local ID: 264 | Name: R7C2c | Global id: 3017233185 | HEX ID: 2153d7b3</p>
+<p>Local ID: 265 | Name: White | Global id: 3020494715 | HEX ID: 7b1709b4</p>
+<p>Local ID: 266 | Name: Metallic Silver Bright | Global id: 3023051477 | HEX ID: d51a30b4</p>
+<p>Local ID: 267 | Name: Audi_S3_Stock | Global id: 3026707707 | HEX ID: fbe467b4</p>
+<p>Local ID: 268 | Name: M_R1C3a | Global id: 3033559475 | HEX ID: b371d0b4</p>
+<p>Local ID: 269 | Name: Nemesis_Black | Global id: 3034087107 | HEX ID: c37ed8b4</p>
+<p>Local ID: 271 | Name: R5C3a | Global id: 3047846996 | HEX ID: 5474aab5</p>
+<p>Local ID: 273 | Name: R6C3c | Global id: 3072049531 | HEX ID: 7bc11bb7</p>
+<p>Local ID: 274 | Name: R1C4b | Global id: 3087401827 | HEX ID: 630306b8</p>
+<p>Local ID: 275 | Name: R6C5a | Global id: 3090974295 | HEX ID: 57863cb8</p>
+<p>Local ID: 276 | Name: P_R1C4a | Global id: 3091648083 | HEX ID: 53ce46b8</p>
+<p>Local ID: 279 | Name: R1C3b | Global id: 3119658726 | HEX ID: e636f2b9</p>
+<p>Local ID: 280 | Name: R4C7a | Global id: 3129890666 | HEX ID: 6a578eba</p>
+<p>Local ID: 281 | Name: C_R5C2a | Global id: 3132765568 | HEX ID: 8035baba</p>
+<p>Local ID: 282 | Name: Red | Global id: 3160773224 | HEX ID: 689265bc</p>
+<p>Local ID: 283 | Name: R4C7b | Global id: 3166101765 | HEX ID: 05e1b6bc</p>
+<p>Local ID: 284 | Name: C_R2C5a | Global id: 3167649258 | HEX ID: ea7dcebc</p>
+<p>Local ID: 285 | Name: Green/Blue/Purple Pearlescent | Global id: 3173021109 | HEX ID: b57520bd</p>
+<p>Local ID: 287 | Name: R7C3b | Global id: 3199502150 | HEX ID: 4687b4be</p>
+<p>Local ID: 290 | Name: R1C3a | Global id: 3219232598 | HEX ID: 5697e1bf</p>
+<p>Local ID: 291 | Name: P_R2C4a | Global id: 3220075212 | HEX ID: cc72eebf</p>
+<p>Local ID: 293 | Name: P_R3C2a | Global id: 3239066858 | HEX ID: ea3c10c1</p>
+<p>Local ID: 294 | Name: Gold | Global id: 3246960990 | HEX ID: 5eb188c1</p>
+<p>Local ID: 295 | Name: C_R7C4a | Global id: 3249808378 | HEX ID: fa23b4c1</p>
+<p>Local ID: 296 | Name: Metallic Red | Global id: 3264945747 | HEX ID: 531e9bc2</p>
+<p>Local ID: 298 | Name: R7C3c | Global id: 3277949935 | HEX ID: ef8b61c3</p>
+<p>Local ID: 299 | Name: P_R7C1a | Global id: 3283345523 | HEX ID: 73e0b3c3</p>
+<p>Local ID: 301 | Name: R2C3a | Global id: 3299288491 | HEX ID: ab25a7c4</p>
+<p>Local ID: 302 | Name: C_R6C4a | Global id: 3331064521 | HEX ID: c9028cc6</p>
+<p>Local ID: 303 | Name: Audi_TT_Stock | Global id: 3332159467 | HEX ID: ebb79cc6</p>
+<p>Local ID: 304 | Name: R6C3a | Global id: 3342346612 | HEX ID: 742938c7</p>
+<p>Local ID: 306 | Name: R2C1c | Global id: 3375037130 | HEX ID: cafa2ac9</p>
+<p>Local ID: 307 | Name: R4C5b | Global id: 3376933094 | HEX ID: e6e847c9</p>
+<p>Local ID: 308 | Name: M_R7C1a | Global id: 3406997747 | HEX ID: f3a812cb</p>
+<p>Local ID: 309 | Name: C_R4C6a | Global id: 3415255194 | HEX ID: 9aa890cb</p>
+<p>Local ID: 310 | Name: R3C2a | Global id: 3420991560 | HEX ID: 4830e8cb</p>
+<p>Local ID: 312 | Name: Dodge_ViperACR_Stock | Global id: 3450645942 | HEX ID: b6adaccd</p>
+<p>Local ID: 313 | Name: R3C4a | Global id: 3465475908 | HEX ID: 44f78ece</p>
+<p>Local ID: 315 | Name: C_R6C3a | Global id: 3477790858 | HEX ID: 8ae04acf</p>
+<p>Local ID: 316 | Name: R3C2b | Global id: 3491656075 | HEX ID: 8b711ed0</p>
+<p>Local ID: 317 | Name: R5C6a | Global id: 3500837663 | HEX ID: 1f8baad0</p>
+<p>Local ID: 318 | Name: P_R1C1a | Global id: 3506145301 | HEX ID: 1588fbd0</p>
+<p>Local ID: 319 | Name: P_R4C2a | Global id: 3510048238 | HEX ID: ee1537d1</p>
+<p>Local ID: 320 | Name: R1C4a | Global id: 3566060029 | HEX ID: fdc18dd4</p>
+<p>Local ID: 321 | Name: R6C1a | Global id: 3571679371 | HEX ID: 8b80e3d4</p>
+<p>Local ID: 322 | Name: R4C4b | Global id: 3573372066 | HEX ID: a254fdd4</p>
+<p>Local ID: 323 | Name: M_R1C2a | Global id: 3594620040 | HEX ID: 888c41d6</p>
+<p>Local ID: 324 | Name: Opel_AstraExtreme_Stock | Global id: 3611231861 | HEX ID: 75063fd7</p>
+<p>Local ID: 325 | Name: R3C3a | Global id: 3618779828 | HEX ID: b432b2d7</p>
+<p>Local ID: 327 | Name: R1C2a | Global id: 3641036634 | HEX ID: 5acf05d9</p>
+<p>Local ID: 328 | Name: C_R5C3a | Global id: 3661382421 | HEX ID: 15433cda</p>
+<p>Local ID: 329 | Name: R7C4a | Global id: 3669226071 | HEX ID: 57f2b3da</p>
+<p>Local ID: 330 | Name: R2C4b | Global id: 3683187440 | HEX ID: f0fa88db</p>
+<p>Local ID: 331 | Name: Foose_69_Stock | Global id: 3683649735 | HEX ID: c70890db</p>
+<p>Local ID: 332 | Name: M_R6C1a | Global id: 3717574893 | HEX ID: edb095dd</p>
+<p>Local ID: 333 | Name: C_R4C5a | Global id: 3719628272 | HEX ID: f005b5dd</p>
+<p>Local ID: 334 | Name: R4C2a | Global id: 3776750975 | HEX ID: 7fa51ce1</p>
+<p>Local ID: 335 | Name: C_R6C2a | Global id: 3784332616 | HEX ID: 485590e1</p>
+<p>Local ID: 336 | Name: P_R1C2a | Global id: 3803994079 | HEX ID: df57bce2</p>
+<p>Local ID: 337 | Name: M_R2C2a | Global id: 3833930706 | HEX ID: d22385e4</p>
+<p>Local ID: 339 | Name: Ford Blue | Global id: 3847752771 | HEX ID: 430c58e5</p>
+<p>Local ID: 340 | Name: P_R5C1a | Global id: 3887155406 | HEX ID: ce48b1e7</p>
+<p>Local ID: 341 | Name: P_R6C2a | Global id: 3896435880 | HEX ID: a8e43ee8</p>
+<p>Local ID: 343 | Name: Picker_Black | Global id: 3913362828 | HEX ID: 8c2d41e9</p>
+<p>Local ID: 344 | Name: R5C3b | Global id: 3950038481 | HEX ID: d1cd70eb</p>
+<p>Local ID: 345 | Name: R7C3a | Global id: 3959630570 | HEX ID: ea2a03ec</p>
+<p>Local ID: 346 | Name: R5C4c | Global id: 3964209181 | HEX ID: 1d0849ec</p>
+<p>Local ID: 347 | Name: Ford_FocusRS_Race | Global id: 3970610354 | HEX ID: b2b4aaec</p>
+<p>Local ID: 348 | Name: M_R3C4a | Global id: 3971969190 | HEX ID: a670bfec</p>
+<p>Local ID: 349 | Name: Canal_Blue | Global id: 3978427485 | HEX ID: 5dfc21ed</p>
+<p>Local ID: 350 | Name: M_R4C7a | Global id: 3995042073 | HEX ID: 19811fee</p>
+<p>Local ID: 351 | Name: C_R1C3a | Global id: 4000721521 | HEX ID: 712a76ee</p>
+<p>Local ID: 352 | Name: M_R3C3a | Global id: 4003985124 | HEX ID: e4f6a7ee</p>
+<p>Local ID: 354 | Name: R5C4a | Global id: 4015217282 | HEX ID: 825a53ef</p>
+<p>Local ID: 356 | Name: R3C3c | Global id: 4028515367 | HEX ID: 27441ef0</p>
+<p>Local ID: 357 | Name: P_R6C5a | Global id: 4056117923 | HEX ID: a372c3f1</p>
+<p>Local ID: 358 | Name: R4C6b | Global id: 4058461662 | HEX ID: de35e7f1</p>
+<p>Local ID: 359 | Name: C_R6C1a | Global id: 4077609504 | HEX ID: 20620bf3</p>
+<p>Local ID: 360 | Name: M_R4C5a | Global id: 4100716319 | HEX ID: 1ff76bf4</p>
+<p>Local ID: 361 | Name: R6C4a | Global id: 4115350684 | HEX ID: 9c444bf5</p>
+<p>Local ID: 364 | Name: P_R5C3a | Global id: 4149718637 | HEX ID: 6dae57f7</p>
+<p>Local ID: 365 | Name: R5C5b | Global id: 4162097882 | HEX ID: da9214f8</p>
+<p>Local ID: 366 | Name: Ford_FR100_Offroad | Global id: 4168819808 | HEX ID: 60247bf8</p>
+<p>Local ID: 368 | Name: M_R1C1a | Global id: 4171539745 | HEX ID: 21a5a4f8</p>
+<p>Local ID: 369 | Name: Metallic Silver | Global id: 4180488510 | HEX ID: 3e312df9</p>
+<p>Local ID: 370 | Name: P_R6C4a | Global id: 4184579983 | HEX ID: 8f9f6bf9</p>
+<p>Local ID: 371 | Name: M_R6C2a | Global id: 4215461579 | HEX ID: cbd642fb</p>
+<p>Local ID: 372 | Name: R4C7c | Global id: 4221214421 | HEX ID: d59e9afb</p>
+<p>Local ID: 373 | Name: M_R4C2a | Global id: 4224867437 | HEX ID: 6d5cd2fb</p>
+<p>Local ID: 374 | Name: M3_Drift | Global id: 4229207958 | HEX ID: 969714fc</p>
+<p>Local ID: 376 | Name: R5C5a | Global id: 4265133100 | HEX ID: 2cc438fe</p>
+<p>Local ID: 377 | Name: Nissan_SkylineR34ZTune_Stock | Global id: 4268419704 | HEX ID: 78ea6afe</p>
+<p>Local ID: 378 | Name: R1C4b | Global id: 4269195724 | HEX ID: ccc176fe</p>
+<p>&nbsp;</p>
+<hr>
+<p>Paint struct:</p>
+<p>&nbsp;</p>
+<pre><code class="language-plaintext">{
       "index": 1,
       "var3_offset": 0,
       "label": "name",
@@ -160,8 +485,6 @@ dateCreated: 2021-03-16T10:44:54.684Z
       "var4": 0
     }
     </code></pre>
-<figure class="image image-style-align-left"><img src="/assets/paints/blur_paints.png">
-  <figcaption>Paints schematic</figcaption>
-</figure>
-<figure class="image image-style-align-left"><img src="/assets/paints/blur_2021_03_12_21_02_05_588.png"></figure>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 <p>&nbsp;</p>
