@@ -2,7 +2,7 @@
 title: Amax Emu roadmap
 description: What is the future holds?
 published: true
-date: 2021-05-21T06:02:31.842Z
+date: 2021-05-21T06:50:03.542Z
 tags: amax, amax-emu
 editor: ckeditor
 dateCreated: 2021-05-21T04:14:57.320Z
@@ -45,3 +45,18 @@ dateCreated: 2021-05-21T04:14:57.320Z
 <h4>In-game profile pictures</h4>
 <p>In-game profile pictures are present in every version of Blur, with an exception for PC version, where a part of code, responsible for it is cut. Currently, research of request, file format and binaries is done, so what is left is to re-implement it and build a backend for it.</p>
 <h3>July 2021</h3>
+<h4>Online connectivity fix</h4>
+<p>In order to fix connection problems, caused by peer-to-peer nature of the game I'm planning to introduce <a href="https://en.wikipedia.org/wiki/Traversal_Using_Relays_around_NAT">TURN server</a>. On paper, it should solve most, if not all, connectivity problems, at the cost of a higher ping between clients. This should work as plug-in solution, without any additional software required.</p>
+<h4>More game stats</h4>
+<p>Game is sending a lot of data back to the server after each race. And currently, 95% this data is unknown. This data should contain data about used mods, player car, paints, lap times and more. Correctly parsing such data can lead to a better, more personalized stats, as well as global usage stats.</p>
+<h3>August 2021</h3>
+<h4>Updated Amax Emu site</h4>
+<p>Currently, <a href="https://amax-emu.com">https://amax-emu.com</a> is extremely bare bone version of what I want to implement. Most of the pages have already been designed, awaiting to be transformed to a proper ReactJS code.</p>
+<figure class="image image_resized" style="width:100%;"><img src="/assets/wiki_pages/photo_2021-03-28_03-04-18.jpg">
+  <figcaption>Front page</figcaption>
+</figure>
+<h3>from September 2021 onwards</h3>
+<h4>Game research</h4>
+<p>Blur internals research, to make fixes possible, graphics adjustable and controls rebind-able.</p>
+<h4>.model file format research</h4>
+<p>In order to add-in new cars and adjust textures .model file formats needs to be researched.</p>
