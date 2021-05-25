@@ -1,0 +1,36 @@
+<!--
+title: Blur common problems (and how to sold them)
+description: Who stole mine d3dx9_42.dll ?
+published: true
+date: 2021-05-25T07:59:31.892Z
+tags: 
+editor: ckeditor
+dateCreated: 2021-05-25T07:59:31.892Z
+-->
+
+<h2>Online connectivity</h2>
+<h3>Lan</h3>
+<p>Regarding LAN problems with lobbies.</p>
+<p>Short answer: There is no way to fix it with ports/antiviruses/firewalls, while playing though VPNs. It's just how it is. Your best options are trial and error approach - try all possible combinations of hosts and order of people connecting to the game.&nbsp;</p>
+<p>Long answer: The problem caused by packets routing. As far as I researched it - every time client connecting to a lobby it sends broadcast and expecting answers from all clients in lobby until timeout. It works fine in real networks (tested on 20 PCs lan party) and not that well in VPN. Packets, for whatever reasons, get lost between clients. Currently, there is no fix. I suspect it is possible to improve situation by increasing timeout or setup L3 VPN with very specific settings.</p>
+<h3>Online (both official and Amax Emu)</h3>
+<p>So! Connections problems.</p>
+<p>Even after 11 years they're still rampart and my hopes about "better nat punching" was shattered. So we're stuck with this.</p>
+<p>&nbsp;</p>
+<p>- Can I do something about them right now?</p>
+<p>- No</p>
+<p>&nbsp;</p>
+<p>- Can something be done in the future?</p>
+<p>- Most likely</p>
+<p>&nbsp;</p>
+<p>Why it is happening:</p>
+<p>Blur is p2p, if you can connect to one out of all clients in a lobby you're busted. Blur and its networking relies on technique called "Nat punching", which basically forwards your game port to outside web. It's fairly complex and not always working, so if you're interested go check out a wiki page.</p>
+<p>What can you do to improve it:</p>
+<p>While Blur does automates (with upnp) the forwarding of 3074 UDP (this is really the one you need) on your hardware, it could sometimes fail. So forwarding this port manually, or putting your PC in DMZ, which I won't recommend, could help.</p>
+<p>And that's it. Sad, I know.</p>
+<p>&nbsp;</p>
+<p>What I'm planing to do to solve it:</p>
+<p>This problem is not new, and have been solved numerous times. The most universal solutions, which will allow to just plug it in in current implementation is TURN server. Basically, instead of connecting to each others you connect to one server, which handles p2p packets forwarding inside. And if you can connect to this server you can connect to any other players using it.</p>
+<p>And to be clear - I'm not 100% sure such set up will work. But I'm about 80% that it will.</p>
+<p>&nbsp;</p>
+<p>When: Planned to be done June-July of this year.</p>
