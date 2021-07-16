@@ -1,0 +1,49 @@
+<!--
+title: Guide: Launching Blur under Linux
+description: In case you're one of these guys.
+published: true
+date: 2021-07-16T09:25:21.370Z
+tags: 
+editor: ckeditor
+dateCreated: 2021-07-16T09:25:21.370Z
+-->
+
+<h1>Launching Blur under Linux</h1>
+<h2>Requirements:</h2>
+<ol>
+  <li>A linux-based system with Wine and PlayOnLinux installed;</li>
+  <li>The game installation files, made available in the #installation-of-game and #blur-amax-emu-server section of the discord server (perform the entire step-by-step provided in the instructions of these channels before continuing);</li>
+  <li>CPU: Intel i5-7200U;</li>
+  <li>GPU: Intel HD graphics 620; and</li>
+  <li>Memory: 8GB DDR4.</li>
+</ol>
+<blockquote>
+  <p>For hardware requirements, keep in mind that this does not reflect the actual minimum requirements, but rather the hardware that this procedure has been tested for.</p>
+</blockquote>
+<h2>Steps:</h2>
+<p>1. Run PlayOnLinux and select the "Install a program" option on the left of the window.</p>
+<p>2. Look for "Blur" in the search box and select to install the only option that appears.</p>
+<p>3. After that, continue with the installation as normal. When you arrive at the screen that asks for the installation method, select the option "Use a setup file in my computer".</p>
+<p>4. Before choosing executable, move "Blur" folder containing the game files to <code>~/.playonlinux/wineprefix/BlurTheGame/drive_c/Program Files (x86)/</code></p>
+<p>5. Rename the executable you want to use to "Blur.exe" (for example, if you want to use the &nbsp;Amax emu server, rename "blur_amax.exe" to "Blur.exe").</p>
+<p>5. Select the Blur.exe as the executable (present in the folder you just copied). &nbsp;The game will start, wait for the menu to appear, then close it.</p>
+<p>6. Continue the rest of the setup normally.</p>
+<hr>
+<p><strong>Extra tip! </strong>If you have Feral Gamemode installed on your system, you can turn it on for this game as follows (tested for GNOME desktop environment):</p>
+<ol>
+  <li>Select the game icon from the PlayOnLinux menu, then choose "Create a shortcut" option.</li>
+  <li>Desktop file have been created in your desktop folder, open it with a text editor and replace the content of the "Exec" variable to "gamemoderun playonlinux --run "Blur" %F".</li>
+  <li>Save the file and move it to <code>~/.local/share/applications</code>.</li>
+  <li>Restart your computer to ensure that the changes are applied, after that you should find a shortcut of the game present in the menu of your system.</li>
+</ol>
+<h2>Known bugs:</h2>
+<ol>
+  <li>Poor performance.</li>
+  <li>Bluetooth headsets are ignored by the game (with pipewire audio manager).</li>
+</ol>
+<p>&nbsp;</p>
+<hr>
+<blockquote>
+  <p>Contribute to this tutorial by suggesting changes and reporting problems.</p>
+  <p><strong>Any kind of help is more than welcome!</strong></p>
+</blockquote>
