@@ -2,7 +2,7 @@
 title: Blur memory addresses
 description: Useful in-memory addresses.
 published: true
-date: 2021-07-16T09:37:44.000Z
+date: 2021-07-20T03:27:30.679Z
 tags: 
 editor: ckeditor
 dateCreated: 2021-03-12T02:51:24.650Z
@@ -13,7 +13,17 @@ dateCreated: 2021-03-12T02:51:24.650Z
 <pre><code class="language-plaintext">172DE548 &gt;&gt; Car Changer Address [Reference]
 
 Blur.exe+D1BAD4 - camera max radius (float)
-Blur.exe+D1B95C - camera max height (float)</code></pre>
+Blur.exe+D1B95C - camera max height (float)
+
+Blur.exe+E35C5A = 01235C5A = Multiplayer Playlist Slots
+if set to 1 and you are the only playere, e.g, 1/1 it will not start the match unfortunately
+but it does trigger the effect as in it is about to start, nonetheless part of the hud is gone and you wait endlessly
+00BF65E4 = IF NOP it increases the player slots available to 20
+if set to a number ]0,20[ you get a prompt saying: Unable to create your multiplayer game session
+Blur.exe+E35C59 = 01235C59 = Minimum Multiplayer Playlist Slots
+
+"Blur.exe"+00DEFD58 [Offset +84] = Current Viewports</code></pre>
+<p>&nbsp;</p>
 <p>&nbsp;</p>
 <h1>In exe functions&nbsp;</h1>
 <p>Re-enables back button combos in Blur 1.&nbsp;</p>
