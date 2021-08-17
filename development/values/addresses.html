@@ -1,31 +1,30 @@
 <!--
-title: Blur memory addresses
+title: Blur Memory Addresses
 description: Useful in-memory addresses.
 published: true
-date: 2021-07-20T03:27:30.679Z
+date: 2021-08-17T15:55:00.639Z
 tags: 
 editor: ckeditor
 dateCreated: 2021-03-12T02:51:24.650Z
 -->
 
-<h1>In memory addresses</h1>
+<h1>Memory addresses</h1>
 <p>&nbsp;</p>
-<pre><code class="language-plaintext">172DE548 &gt;&gt; Car Changer Address [Reference]
-
-Blur.exe+D1BAD4 - camera max radius (float)
-Blur.exe+D1B95C - camera max height (float)
+<pre><code class="language-plaintext">Blur.exe+D1BAD4 = camera max radius (float)
+Blur.exe+D1B95C = camera max height (float)
 
 Blur.exe+E35C5A = 01235C5A = Multiplayer Playlist Slots
-if set to 1 and you are the only playere, e.g, 1/1 it will not start the match unfortunately
+If set to 1 and you are the only playere, e.g, 1/1 it will not start the match unfortunately,
 but it does trigger the effect as in it is about to start, nonetheless part of the hud is gone and you wait endlessly
-00BF65E4 = IF NOP it increases the player slots available to 20
+
+00BF65E4 = If NOP it increases the player slots available to 20
 if set to a number ]0,20[ you get a prompt saying: Unable to create your multiplayer game session
+
 Blur.exe+E35C59 = 01235C59 = Minimum Multiplayer Playlist Slots
 
-"Blur.exe"+00DEFD58 [Offset +84] = Current Viewports</code></pre>
+["Blur.exe"+00DEFD58]+84 = Current Viewports</code></pre>
 <p>&nbsp;</p>
-<p>&nbsp;</p>
-<h1>In exe functions&nbsp;</h1>
+<h1>Executable functions&nbsp;</h1>
 <p>Re-enables back button combos in Blur 1.&nbsp;</p>
 <p>Avalible features:</p>
 <ul>
@@ -39,3 +38,255 @@ Blur.exe+E35C59 = 01235C59 = Minimum Multiplayer Playlist Slots
   <p>you can change the ingame camera to focus on different players and change your car to be AI controlled, I still can't get into the debug menu though</p>
   <p><strong>Zyclonia#1545</strong></p>
 </blockquote>
+<p>&nbsp;</p>
+<h1><strong>Executable function addresses</strong></h1>
+<p>&nbsp;</p>
+<pre><code class="language-plaintext">** CHANGE PUSH 0x0 TO PUSH 0x1 **
+
+00E00A20 Vehicle.FlightControl.Enabled
+00E00A8C Vehicle.Hud.Draw
+00E01030 Vehicle.Effects.Emp.DebugTrigger
+00E023F0 Vehicle.LightTrails.Update
+00E024DC Vehicle.DebugRender.DrawSorceryConstraints 
+00E04350 Vehicle.Lol.BoostHackGO
+00E046B0 Vehicle.Damage.Repair.OverrideAmount
+00E008B0 Vehicle.Effects.EnableLog
+00E008D0 Vehicle.Debug.DrawTriangleCache
+00E009E0 Vehicle.Damage.SetupNodes
+00E00A00 Vehicle.Render.Debug.DisplayModels
+00E00A40 Vehicle.FlightControl.ForceOn
+00E00A60 Vehicle.FlightControl.WorldSpace
+00E02AE0 Vehicle.Debug.Output.PrintPhysicsParts
+00E02B20 Vehicle.DoNotTouchMe.CreateConstraints
+00E040D0 Vehicle.GamePhysicsMechanics.GroundedDownForce.Enable
+00E040F0 Vehicle.GamePhysicsMechanics.GroundedDownForce.NeedsAllWheelsOn
+00E04110 Vehicle.DisablePerformanceModifiers
+00E04130 Vehicle.Damage.Wheels.PerformanceModifiers.EnableSteeringPull
+00E0593C Vehicle.Damage.Impact.DetachWheels
+00E059FC Vehicle.Damage.Impact.KnockOutLights
+00E22D00 Vehicle.Collision.DrawPartShapeInstantly
+00E2345C Vehicle.DebugRender.DrawHelperAxis
+00E2350C Vehicle.DebugRender.DrawMeshSpawners
+00E2354C Vehicle.DebugRender.DrawConstraints
+00E235E0 Vehicle.Windows.Up
+00E23600 Vehicle.Windows.Down
+00E23800 Vehicle.Damage.Code.Wheels.ActuallyBurstTyre
+00E23820 Vehicle.Damage.Code.Wheels.ActuallyLoseWheel
+00E23840 Vehicle.Damage.DisableSPUDamage
+00E099F0 Vehicle.ShowSensorDebug
+00E052C0 Vehicle.DisableHeadlightCovers
+00E052E0 Vehicle.Component.Parts.Collision
+00E05450 Vehicle.Collision.EnableDeformableCollisionMesh
+00E05540 Vehicle.Damage.Fatal.EnableFatalDamageCamera
+00E05560 Vehicle.Ligths.DisableFlares
+00E058FC Vehicle.Damage.Impact.DetachParts - Detaches parts I
+00E05A3C Vehicle.Damage.Impact.FatalDamage
+00E05BD0 Vehicle.ShowLogicActorDebugPoints
+00E05C30 Vehicle.Ghost.LogicActor.Ghost
+00E06210 Vehicle.Components.HandOfGod.TriggerHandOfGod
+00E06990 Vehicle.Components.DisableVehicleGameplayDamage
+00E386E4 Vehicle.LOD.SinglePlayerForceTextureDetail
+00E3868C Vehicle.DebugModel
+00E243E0 Vehicle.Damage.Parts.DisablePartDamage - Disables vehicle virtual damage
+00E23080 Vehicle.Damage.Parts.AllowDetaching - Detaches parts II
+00E23040 Vehicle.Damage.Code.ControlPoints.Override
+00E21D80 Vehicle.Livery.Edit.RemoveLayer
+00E20E3C Vehicle.DebugRender.MasterDraw
+00E03C60 Vehicle.GamePhysicsMechanics.Constraint.DrawConstraint
+00E03CE0 Vehicle.Damage.Fatal.FakeFatalDamageParticles
+00E01120 Vehicle.Effects.Impacts.SmallImpactAccumulatorShow
+00E01870 Vehicle.ConstraintCar
+00E01EE0 Vehicle.HeroLight.Enable
+00E02260 Vehicle.Logic.Impulse.Apply
+00E023F0 Vehicle.LightTrails.Update
+00E02890 Vehicle.Effects.LightTrails.DrawEmitters
+00E02B00 Vehicle.Parts.RecreateConstraints
+00E06140 Vehicle.Components.Abilities.UseNetworkVersion
+00E0655C Vehicle.Components.PlayerRubberBanding.DisablePlayerRubberbanding
+00E0659C Vehicle.Components.PlayerRubberBanding,DrawRubberBandGroupsOnRaceLine
+00E065DC Vehicle.Components.PlayerRubberBanding.ShowRubberBandingModifier
+00E0661C Vehicle.Components.PlayerRubberBanding.ShowRubberBandingImpulse
+00E0665C Vehicle.Components.PlayerRubberBanding.ShowGroupSizes
+00E06B11 Vehicle.Upgrades.BatteringRam.ApplyFakePhysicsToVehicle
+00E06B30 Vehicle.Upgrades.BatteringRam.HairTrigger
+00E06DE0 Vehicle.Collision.DisplayGamePlayImpulses
+00E20E7C Vehicle.Debug.RenderHeadlightInfo
+00E21AE0 Vehicle.Livery.Expose
+
+00E151B0 Graphics.Display.Window.ForceClearDepth
+00E16460 Graphics.Display.Render.TimingRender.RollUp
+00E18380 Graphics.Dynamic.DebugInfo.Show
+00E18410 Graphics.Dynamic.DebugGraphics.Render
+00E19150 Graphics.Effect.PostProcess.DepthOfField.OverridePlaneInFocus
+00E19860 Graphics.Render.PostProcess.MotionBlurDoF.Enable
+00E19880 Graphics.Render.PostProcess.MotionBlurDoF.BlurDynamicObjects
+00E19AA0 Graphics.Render.PostProcess.MotionBlurDoF.UseAlternateBuffer
+00E19B80 Graphics.Effect.Ocean.Wireframe
+00E19D20 Graphics.Render.PostProcess.MotionBlur.UseAlternateBuffer
+00E1B830 Graphics.Render.Movie.DisableRender
+00E1C3D0 Graphics.Render.PostProcess.HDR.ShowNoise
+00E1CC10 Graphics.Debug.ClearPersistentDebug
+00E1D3E0 Graphics.Render.PostProcess.HDR.Bloom.PointFilter
+00E1D530 Graphics.Render.PostProcess.HDR.FakeAA
+00E1DF80 Graphics.Render.PostProcess.MotionBlur.BlurDynamicObjects
+00E2A4D0 Graphics.Framework.Vsync
+
+00E3C1C0 UI.MiniMap.SinglePlayerFlagAsRival
+00E3BDC0 UI.RacePreview.DrawDebug
+00E3BDA0 UI.RacePreview.UseDebug
+00E36310 UI.ShowRoom.TestLoadNewCar
+00E3627C UI.LoadOldRaceBook
+
+00E3A890 SinglePlayer.UnlockAllCars
+00E3A8C0 SinglePlayer.CompleteAllTiers
+
+00E09A90 Multiplayer.IdleTimeout.UseDebugInactiveTimeLimit
+00E38130 Multiplayer.PlayerVehiclesUnderAiControl
+00E37F7C Multiplayer.AllowSingleRacer
+00E09A3C Multiplayer.IdleTimeout.DisableTimoutComponent
+00E09A70 Multiplayer.IdleTimeout.DisableInactivityGhosting
+00E0B6B0 Multiplayer.SuperControlComponent.SuperControlEnable
+00E0B6D0 Multiplayer.SuperControlComponent.SuperControlDynamicOverride
+00E0B9D0 Multiplayer.SuperControlComponent.DebugMode
+
+00E2B46C System.Advertising.ShowMoneyMakers
+00E2EC30 System.MemoryHUD.ShowMemoryUsage
+00E2EE10 System.MemoryHUD.AlwaysShowAsKB
+00E2E560 System.Performance.ShowStats
+
+00E32A50 GameSys.Lod.OverrideDetail
+00E2EC10 GameSys.DisableOnScreenDebugMenu
+00E2E150 GameSys.FileMonitor.Benchmark.Toggle
+00E2E0DC GameSys.FileMonitor.Enable
+00E2DCE0 Gamesys.GameResource.LoadAllMetaDebug
+00E3A8C0 GameSys.Level.RenderModeInfo
+00E2CFCC GameSys.CrowdSystem.DisableCreationOfCrowdSystem
+00E2AE4C GameSys.Debug.KeyCombos - Slowmotion [Back + Y] Follow prev/next car on track - [Back + Left/Right on D-pad]
+00E2AE00 GameSys.DebugHUD.ShowBuildInfo
+00E2AB50 GameSys.DisableDebugHUD
+00E0D760 GameSys.SpecialFX.SplashCameraRenderDebug
+
+00E14C90 Camera2.PhotoMode.HideCapture
+00E14A30 Camera2.TvCamera.Override
+00E14810 Camera2.DebugTools.MapWizard
+
+00E0ED9C Amax.GameMode.Destrction.SpawningEnabled
+00E0ED70 Amax.GameMode.Destruction.SpawnNextWave
+00E0ED50 Amax.GameMode.Destruction.KillAllActive
+00E3AFE0 Amax.GameMode.Checkpoint.UnlimitedTime
+00E3ACFC Amax.GameMode.Destruction.UnlimitedTime
+00E0ED30 Amax.GameMode.Destruction.DebugDraw
+00E09970 Amax.GameMode.StreetRace.UnlimitedFanRunTime
+00E37F3C Amax.Multiplayer.RollingStartHandOfGod
+00E3B9CC Amax.Tool.DistanceHack
+00E3B98C Amax.Tool.TimeHack
+00E063FC Amax.Multiplayer.Balance.DominationEnabled
+
+00E0EBD2 AmaxAI.Perks.General.OverrideTestNitro
+00E0E940 AmaxAI.DontUsePickups - AI opponents won’t use their powerups
+00E0E510 AmaxAI.DebugCar.Player.PlayerUsesSomeSteeringForces
+
+00E047C0 Game.DisableVehicleVisualDamage
+00E39244 Game.Debug.NumAdditionalCars
+00E39200 Game.Debug.LoadLargestVehicles
+00E3878C Game.RemoveMinorCharactersFromRaces
+
+00E389FC Test.ShowBootInfo
+00E2AF20 Test.DoNotUse.Dangerous.EnableReadErrorDialogs
+
+00E3B060 Cheats.DebugSave
+00E36330 Cheats.GiveRandomAchievement
+
+00E06090 Perks.Shunt.DrawTrail
+00E071B0 Perks.DoubleNitrous.ForceDoubleNitrous
+
+00E3B550 RaceBook.GivePlayerOneMillionDollars
+00E3EBE0 Kanzen.Camera.HollywoodVehicleCamera.LookSide.Override
+00E0F6DC DLC.LicenseAllDLC
+00E38D20 DialogueManager.PlayAll
+00E3B00C Debug.ShowDevCities
+00E0249C RacingPhysics.Cars.UpdateCentreOfMass
+00E0BA50 ActorDebug.Actors.Driver.DisableDriverEnvMap
+00E0BBFC RLC.UseDebugHUD
+
+** CHANGE PUSH 0x1 TO PUSH 0x0 **
+
+00E040B0 Vehicle.GamePhysicsMechanics.InFlightDownForce.Enable
+00E04370 Vehicle.Lol.DisableBoostWhenBraking
+00E047A0 Vehicle.Damage.Parts.FatalDamageKnockWheelsOff
+00E061DC Vehicle.Components.HandOfGod.Enabled - Disables resets when crashing or driving backwards
+00E054E0 Vehicle.Collisions.EnableNewVehicleToVehicleCollisionMesh - Disables collisions with cars &amp; powerups
+00E05280 Vehicle.Damage.Parts.EnablePhysics
+00E052A0 Vehicle.DisableIntWindows
+00E052C0 Vehicle.DisableHeadlightCovers
+00E05520 Vehicle.DeferredVehicleReset
+00E05540 Vehicle.Damage.Fatal.EnableFatalDamageCamera
+00E05560 Vehicle.Lights.DisableFlares
+00E058BC Vehicle.Damage.Impact.DeformPanels
+00E0597C Vehicle.Damage.Impact.DislodgeParts
+00E059BC Vehicle.Damage.Impact.BreakLights
+00E24380 Vehicle.Damage.Parts.EnableFlapping
+00E20D60 Vehicle.Debug.ExplodeParts
+00E21430 Vehicle.Lights.UseNewMethod
+00E23060 Vehicle.Damage.Parts.AllowHinging - Detaches fully the damaged parts
+00E243A0 Vehicle.Damage.Parts.LetWheelsFallOff
+00E24710 Vehicle.Damage.TreatEachOtherContactPointAsSeparate
+00E36BB0 Vehicle.GamePhysicsMechanics.WallRiding.EnableFix2
+00E22400 Vehicle.Materials.Paint.UseFirstPaintJobFound
+00E047E0 Vehicle.InitialState.NightLights - Turns off all vehicles lights
+
+00E19310 Graphics.Effect.PostProcess.DepthOfField.Enable
+00E19900 Graphics.Render.PostProcess.MotionBlurDoF.EnableDoF
+00E19CB0 Graphics.Render.PostProcess.MotionBlur.Enable
+00E1D4F0 Graphics.Render.PostProcess.HDR.Bloom.Enable
+00E1DF60 Graphics.Render.PostProcess.MotionBlur.Enable
+00E0D630 Graphics.Render.PostProcess.HDR.ColourCorrection
+00E1DF20 Graphics.Render.PostProcess.BoxBlur.Enable
+00E1DF40 Graphics.Render.PostProcess.GaussianBlur.Enable
+00E15DC1 Graphics.Display.Render.ResourceRender.Type
+
+00E3BA2C UI.HUD.BillboardToCarInsteadOfCamera
+00E3B730 UI.EnableLoadingScreen
+00E27E20 UI.Render
+
+00E354D0 Game.EnableLutRamPak
+00E3720C Game.PreviouslyOnBlurEnable - Skips the "Previously on Blur" popups
+00E371CC Game.DevMode
+00DFE9A0 Game.TimeStep50Hz
+
+00E2AB30 GameSys.DebugLayerEnable
+00E2EA20 GameSys.DebugHUD.Render.Streams
+
+00E34EAC Multiplayer.Upgrades.DecoyDrop.RotateInOppositeDirection
+00E1DAA0 Graphics.Render.PostProcess.HDR.Bloom.Ghost.Enable - It is a blurred mirrored ingame-camera overlayed in races. The effect can be best seen on the "Hollywood Hills - Downtown Vista" track
+00E0079C Test.BloomUpdateEnabled
+00DFE980 Camera2.MakeSlowmoCaptureWork
+
+** CHANGE PUSH 0x?? **
+
+00E238C4 Vehicle.Damage.Debug.CurrentLayer PUSH 0x-1
+00E3A6E4 Vehicle.LOD.MultiplayerRemoteDetail PUSH 0x7
+00E3A694 Vehicle.LOD.MultiplayerLocalDetail PUSH 0xA
+00E39174 Vehicle.LOD.DebugAiDetail PUSH 0x7
+00E24874 Vehicle.Damage.MaxContactPoints PUSH 0x4
+
+00E391CC Cheats.Debug_PerkSlotOverride PUSH 0x3
+
+00E11BB1 GameSys.MiniMonitor.PerfViewCaptureThresholdFPS PUSH 0x3C
+00E32B10 GameSys.Lod.OverrideTargetFPS PUSH 0x0
+
+00E0711C Multiplayer.Upgrades.SafetyNet.MaxPickupsAbsorbable PUSH 0x2
+00E37FF1 Multiplayer.Ranked.MinRankedPlayers PUSH 0xFF
+
+00E0EB24 AmaxAI.PerkLogic.CollectPickups.Type PUSH 0x6
+
+00E0F71C DLC.NumItemsToEnumerate PUSH 0xA
+
+00E1D2F1 Graphics.Render.Quality PUSH 0x6
+00E1DAE1 Graphics.Render.PostProcess.HDR.Bloom.Downsamples PUSH 0x4
+
+00E2DD40 Gamesys.Level.RouteOverride PUSH 0xFF
+
+00E36D96 Vehicle.GamePhysicsMechanics.WallRiding.MinimumPenetration
+
+00E26B96 Graphics.WorldRender.LocalizedCubemaps.Settings.DrawDistance</code></pre>
