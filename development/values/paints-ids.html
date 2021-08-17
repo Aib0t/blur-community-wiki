@@ -2,21 +2,21 @@
 title: Car paint IDs
 description: I want it purple!
 published: true
-date: 2021-06-18T03:09:26.584Z
+date: 2021-08-17T15:07:17.572Z
 tags: 
 editor: ckeditor
 dateCreated: 2021-03-16T10:44:54.684Z
 -->
 
-<h1>Car paints.</h1>
-<p>Paints (internal name<span style="font-family:'Courier New', Courier, monospace;"><code>VEH_MaterialPaint</code></span> are stored in <code>vehicles.bin</code> and consists of many values.</p>
+<h1>Car paints</h1>
+<p>Paints (internal name<span style="font-family:'Courier New', Courier, monospace;"><code>VEH_MaterialPaint</code></span>) are stored in <code>vehicles.bin</code> and <code>splitscreen.bin</code></p>
 <p>Paints can be divided in 2 categories:</p>
 <ul>
   <li>Basic (available from color picker)</li>
   <li>Special and car-related</li>
 </ul>
 <blockquote>
-  <p>It should be noted that some cars can't be painted because of textured body (wraps).</p>
+  <p>It should be noted that some cars can't be painted because of textured body (wraps). Only chrome paint is able to override these.</p>
 </blockquote>
 <h4>Paint object structure</h4>
 <p>Paints in Blur are very far from simple. Paints are stored as 1 pixel tall and 255 pixels wide dds texture with alpha channel. RGB channels used as diffuse map and alpha channel controls reflectivity of the surface.</p>
