@@ -2,23 +2,23 @@
 title: Paint IDs
 description: Extracted from game files
 published: true
-date: 2021-08-18T11:59:14.498Z
+date: 2021-08-18T12:04:10.573Z
 tags: 
 editor: ckeditor
 dateCreated: 2021-08-18T11:15:37.569Z
 -->
 
-<h1>Car paints</h1>
+<h1>Vehicle paints</h1>
 <p>Paints (internal name<span style="font-family:'Courier New', Courier, monospace;"><code>VEH_MaterialPaint</code></span>) are stored in <code>vehicles.bin</code> and <code>splitscreen.bin</code></p>
 <p>Paints can be divided in 2 categories:</p>
 <ul>
   <li>Basic (available from color picker)</li>
-  <li>Special and car-related</li>
+  <li>Special and car-specific</li>
 </ul>
 <blockquote>
   <p>It should be noted that some cars can't be painted because of textured body (wraps). Only chrome paint is able to override these.</p>
 </blockquote>
-<h4>Paint object structure</h4>
+<h2>Paint object structure</h2>
 <p>Paints in Blur are very far from simple. Paints are stored as 1 pixel tall and 255 pixels wide dds texture with alpha channel. RGB channels used as diffuse map and alpha channel controls reflectivity of the surface.</p>
 <p>Every paint contains:</p>
 <ul>
@@ -49,9 +49,9 @@ dateCreated: 2021-08-18T11:15:37.569Z
   <figcaption>Paint name decoder</figcaption>
 </figure>
 <h2>Car-specific paints</h2>
-<p>All cars in game has a default paint job. This paint jobs consists of the same data as basic paint and can be applied to any other cars with some degree of success.</p>
+<p>All cars in-game have a default paint job. These paint jobs consist of the same data as basic paint and can be applied to any other cars with some degree of success.</p>
 <h2>Special paints</h2>
-<p>Some special paints are referenced in game file. Gold, silver, chrome and some others. <mark class="pen-red">Currently untested.&nbsp;</mark></p>
+<p>Some special paints are referenced in game file. Gold, silver, chrome and some others.</p>
 <blockquote>
   <p>Please, report you results of applying paints from this category to <strong>Aibot#3399</strong> at Discord.</p>
 </blockquote>
