@@ -1,0 +1,1521 @@
+<!--
+title: Paint IDs
+description: Extracted from game files
+published: true
+date: 2021-08-18T11:15:37.569Z
+tags: 
+editor: ckeditor
+dateCreated: 2021-08-18T11:15:37.569Z
+-->
+
+<h1>Car paints</h1>
+<p>Paints (internal name<span style="font-family:'Courier New', Courier, monospace;"><code>VEH_MaterialPaint</code></span>) are stored in <code>vehicles.bin</code> and <code>splitscreen.bin</code></p>
+<p>Paints can be divided in 2 categories:</p>
+<ul>
+  <li>Basic (available from color picker)</li>
+  <li>Special and car-related</li>
+</ul>
+<blockquote>
+  <p>It should be noted that some cars can't be painted because of textured body (wraps). Only chrome paint is able to override these.</p>
+</blockquote>
+<h4>Paint object structure</h4>
+<p>Paints in Blur are very far from simple. Paints are stored as 1 pixel tall and 255 pixels wide dds texture with alpha channel. RGB channels used as diffuse map and alpha channel controls reflectivity of the surface.</p>
+<p>Every paint contains:</p>
+<ul>
+  <li>undercoatColour (in RGB)</li>
+  <li>scuffColour (in RGB)</li>
+  <li>colours - array of RBG values</li>
+  <li>colourCurve - <a href="https://en.wikipedia.org/wiki/Cubic_Hermite_spline">cubic hermit spline</a>, defined by key frames</li>
+  <li>reflectivityCurve - <a href="https://en.wikipedia.org/wiki/Cubic_Hermite_spline">cubic hermit spline</a>, defined by key frames</li>
+</ul>
+<p>You can check out example of exported paint structure at the bottom of the page.</p>
+<h2>Basic paints</h2>
+<p>Basic paints has distinctive names:</p>
+<ul>
+  <li>R2C5x - for basic color</li>
+  <li>M_R2C5x - for metallic version</li>
+  <li>P_R2C5x - for pearlessence variant</li>
+  <li>C_R2C5x - for candy variant</li>
+</ul>
+<p>Name of basic paints consists of:</p>
+<ol>
+  <li>Type header</li>
+  <li>Row number</li>
+  <li>Column number</li>
+  <li>Shade letter (from a to c)</li>
+</ol>
+<p>You can use a decoder below to for better understatement of where paint is located on in-game color picker.</p>
+<figure class="image"><img src="/assets/paints/blur_paints.png">
+  <figcaption>Paint name decoder</figcaption>
+</figure>
+<h2>Car-specific paints</h2>
+<p>All cars in game has a default paint job. This paint jobs consists of the same data as basic paint and can be applied to any other cars with some degree of success.</p>
+<h2>Special paints</h2>
+<p>Some special paints are referenced in game file. Gold, silver, chrome and some others. <mark class="pen-red">Currently untested.&nbsp;</mark></p>
+<blockquote>
+  <p>Please, report you results of applying paints from this category to <strong>Aibot#3399</strong> at Discord.</p>
+</blockquote>
+<h1>Basic paints</h1>
+<p>&nbsp;</p>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Hex ID</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>R1C1a</td>
+        <td>96306d9f</td>
+      </tr>
+      <tr>
+        <td>R1C1b</td>
+        <td>0517717b</td>
+      </tr>
+      <tr>
+        <td>R1C1c</td>
+        <td>3b4f0d56</td>
+      </tr>
+      <tr>
+        <td>R1C2a</td>
+        <td>5acf05d9</td>
+      </tr>
+      <tr>
+        <td>R1C2b</td>
+        <td>d731ca4f</td>
+      </tr>
+      <tr>
+        <td>R1C2c</td>
+        <td>70d9871d</td>
+      </tr>
+      <tr>
+        <td>R1C3a</td>
+        <td>5697e1bf</td>
+      </tr>
+      <tr>
+        <td>R1C3b</td>
+        <td>e636f2b9</td>
+      </tr>
+      <tr>
+        <td>R1C3c</td>
+        <td>ccb6d935</td>
+      </tr>
+      <tr>
+        <td>R1C4a</td>
+        <td>fdc18dd4</td>
+      </tr>
+      <tr>
+        <td>R1C4b</td>
+        <td>630306b8</td>
+      </tr>
+      <tr>
+        <td>R1C4b</td>
+        <td>ccc176fe</td>
+      </tr>
+      <tr>
+        <td>R2C1a</td>
+        <td>32dc5775</td>
+      </tr>
+      <tr>
+        <td>R2C1b</td>
+        <td>6453e554</td>
+      </tr>
+      <tr>
+        <td>R2C1c</td>
+        <td>cafa2ac9</td>
+      </tr>
+      <tr>
+        <td>R2C2a</td>
+        <td>4f33e52c</td>
+      </tr>
+      <tr>
+        <td>R2C2b</td>
+        <td>e4bdf392</td>
+      </tr>
+      <tr>
+        <td>R2C2c</td>
+        <td>518ffe0d</td>
+      </tr>
+      <tr>
+        <td>R2C3a</td>
+        <td>ab25a7c4</td>
+      </tr>
+      <tr>
+        <td>R2C3b</td>
+        <td>c5b75f09</td>
+      </tr>
+      <tr>
+        <td>R2C3c</td>
+        <td>3bb8ed78</td>
+      </tr>
+      <tr>
+        <td>R2C4a</td>
+        <td>2d108b6f</td>
+      </tr>
+      <tr>
+        <td>R2C4b</td>
+        <td>f0fa88db</td>
+      </tr>
+      <tr>
+        <td>R2C4c</td>
+        <td>38adf35e</td>
+      </tr>
+      <tr>
+        <td>R2C5a</td>
+        <td>98914903</td>
+      </tr>
+      <tr>
+        <td>R2C5a</td>
+        <td>7526cb53</td>
+      </tr>
+      <tr>
+        <td>R2C5b</td>
+        <td>6b56210b</td>
+      </tr>
+      <tr>
+        <td>R2C5c</td>
+        <td>e8be2267</td>
+      </tr>
+      <tr>
+        <td>R3C1a</td>
+        <td>a7c1db23</td>
+      </tr>
+      <tr>
+        <td>R3C1b</td>
+        <td>15c33b0d</td>
+      </tr>
+      <tr>
+        <td>R3C1c</td>
+        <td>123a6e69</td>
+      </tr>
+      <tr>
+        <td>R3C2a</td>
+        <td>4830e8cb</td>
+      </tr>
+      <tr>
+        <td>R3C2b</td>
+        <td>8b711ed0</td>
+      </tr>
+      <tr>
+        <td>R3C2c</td>
+        <td>24a906a1</td>
+      </tr>
+      <tr>
+        <td>R3C3a</td>
+        <td>b432b2d7</td>
+      </tr>
+      <tr>
+        <td>R3C3b</td>
+        <td>e4ab82a1</td>
+      </tr>
+      <tr>
+        <td>R3C3c</td>
+        <td>27441ef0</td>
+      </tr>
+      <tr>
+        <td>R3C4a</td>
+        <td>44f78ece</td>
+      </tr>
+      <tr>
+        <td>R3C4b</td>
+        <td>432fb14c</td>
+      </tr>
+      <tr>
+        <td>R3C4c</td>
+        <td>98d4586a</td>
+      </tr>
+      <tr>
+        <td>R3C5a</td>
+        <td>c9476922</td>
+      </tr>
+      <tr>
+        <td>R3C5a</td>
+        <td>e5ee2628</td>
+      </tr>
+      <tr>
+        <td>R3C5b</td>
+        <td>c8569c9d</td>
+      </tr>
+      <tr>
+        <td>R3C5c</td>
+        <td>59b4027d</td>
+      </tr>
+      <tr>
+        <td>R3C6a</td>
+        <td>b58b04b2</td>
+      </tr>
+      <tr>
+        <td>R3C6b</td>
+        <td>5207600d</td>
+      </tr>
+      <tr>
+        <td>R3C6c</td>
+        <td>61f0b238</td>
+      </tr>
+      <tr>
+        <td>R4C1a</td>
+        <td>83b55222</td>
+      </tr>
+      <tr>
+        <td>R4C1b</td>
+        <td>2ecf9d98</td>
+      </tr>
+      <tr>
+        <td>R4C1c</td>
+        <td>49cb556a</td>
+      </tr>
+      <tr>
+        <td>R4C2a</td>
+        <td>7fa51ce1</td>
+      </tr>
+      <tr>
+        <td>R4C2b</td>
+        <td>68d93b63</td>
+      </tr>
+      <tr>
+        <td>R4C2c</td>
+        <td>d8282640</td>
+      </tr>
+      <tr>
+        <td>R4C3a</td>
+        <td>1703eb84</td>
+      </tr>
+      <tr>
+        <td>R4C3b</td>
+        <td>855e03ac</td>
+      </tr>
+      <tr>
+        <td>R4C3c</td>
+        <td>55ea6616</td>
+      </tr>
+      <tr>
+        <td>R4C4a</td>
+        <td>83ac2758</td>
+      </tr>
+      <tr>
+        <td>R4C4b</td>
+        <td>a254fdd4</td>
+      </tr>
+      <tr>
+        <td>R4C4c</td>
+        <td>64154c2f</td>
+      </tr>
+      <tr>
+        <td>R4C5a</td>
+        <td>0ab98655</td>
+      </tr>
+      <tr>
+        <td>R4C5b</td>
+        <td>e6e847c9</td>
+      </tr>
+      <tr>
+        <td>R4C5c</td>
+        <td>0483c581</td>
+      </tr>
+      <tr>
+        <td>R4C6a</td>
+        <td>cca33f83</td>
+      </tr>
+      <tr>
+        <td>R4C6b</td>
+        <td>de35e7f1</td>
+      </tr>
+      <tr>
+        <td>R4C6c</td>
+        <td>29c6af95</td>
+      </tr>
+      <tr>
+        <td>R4C7a</td>
+        <td>6a578eba</td>
+      </tr>
+      <tr>
+        <td>R4C7b</td>
+        <td>05e1b6bc</td>
+      </tr>
+      <tr>
+        <td>R4C7c</td>
+        <td>d59e9afb</td>
+      </tr>
+      <tr>
+        <td>R5C1a</td>
+        <td>ef114e20</td>
+      </tr>
+      <tr>
+        <td>R5C1b</td>
+        <td>8aadb5aa</td>
+      </tr>
+      <tr>
+        <td>R5C1c</td>
+        <td>babf4c14</td>
+      </tr>
+      <tr>
+        <td>R5C2a</td>
+        <td>ae30fb00</td>
+      </tr>
+      <tr>
+        <td>R5C2b</td>
+        <td>0fc7dd58</td>
+      </tr>
+      <tr>
+        <td>R5C2c</td>
+        <td>61d0d392</td>
+      </tr>
+      <tr>
+        <td>R5C3a</td>
+        <td>5474aab5</td>
+      </tr>
+      <tr>
+        <td>R5C3b</td>
+        <td>d1cd70eb</td>
+      </tr>
+      <tr>
+        <td>R5C3c</td>
+        <td>f3756728</td>
+      </tr>
+      <tr>
+        <td>R5C4a</td>
+        <td>825a53ef</td>
+      </tr>
+      <tr>
+        <td>R5C4b</td>
+        <td>43947fa9</td>
+      </tr>
+      <tr>
+        <td>R5C4c</td>
+        <td>1d0849ec</td>
+      </tr>
+      <tr>
+        <td>R5C5a</td>
+        <td>2cc438fe</td>
+      </tr>
+      <tr>
+        <td>R5C5b</td>
+        <td>da9214f8</td>
+      </tr>
+      <tr>
+        <td>R5C5c</td>
+        <td>a6a64aa5</td>
+      </tr>
+      <tr>
+        <td>R5C6a</td>
+        <td>1f8baad0</td>
+      </tr>
+      <tr>
+        <td>R5C6b</td>
+        <td>7f05d30e</td>
+      </tr>
+      <tr>
+        <td>R5C6c</td>
+        <td>201dba6c</td>
+      </tr>
+      <tr>
+        <td>R6C1a</td>
+        <td>8b80e3d4</td>
+      </tr>
+      <tr>
+        <td>R6C1b</td>
+        <td>82557999</td>
+      </tr>
+      <tr>
+        <td>R6C1c</td>
+        <td>1ee6549d</td>
+      </tr>
+      <tr>
+        <td>R6C2a</td>
+        <td>0884be64</td>
+      </tr>
+      <tr>
+        <td>R6C2b</td>
+        <td>5209aa37</td>
+      </tr>
+      <tr>
+        <td>R6C2c</td>
+        <td>f259d28d</td>
+      </tr>
+      <tr>
+        <td>R6C3a</td>
+        <td>742938c7</td>
+      </tr>
+      <tr>
+        <td>R6C3b</td>
+        <td>6e452e98</td>
+      </tr>
+      <tr>
+        <td>R6C3c</td>
+        <td>7bc11bb7</td>
+      </tr>
+      <tr>
+        <td>R6C4a</td>
+        <td>9c444bf5</td>
+      </tr>
+      <tr>
+        <td>R6C4b</td>
+        <td>36982166</td>
+      </tr>
+      <tr>
+        <td>R6C4c</td>
+        <td>1acb9b3c</td>
+      </tr>
+      <tr>
+        <td>R6C5a</td>
+        <td>57863cb8</td>
+      </tr>
+      <tr>
+        <td>R6C5b</td>
+        <td>20a926b2</td>
+      </tr>
+      <tr>
+        <td>R6C5c</td>
+        <td>d824a8b3</td>
+      </tr>
+      <tr>
+        <td>R7C1a</td>
+        <td>17390f60</td>
+      </tr>
+      <tr>
+        <td>R7C1b</td>
+        <td>586c2725</td>
+      </tr>
+      <tr>
+        <td>R7C1c</td>
+        <td>2bd8da9c</td>
+      </tr>
+      <tr>
+        <td>R7C2a</td>
+        <td>1527e302</td>
+      </tr>
+      <tr>
+        <td>R7C2b</td>
+        <td>e44ca01f</td>
+      </tr>
+      <tr>
+        <td>R7C2c</td>
+        <td>2153d7b3</td>
+      </tr>
+      <tr>
+        <td>R7C3a</td>
+        <td>ea2a03ec</td>
+      </tr>
+      <tr>
+        <td>R7C3b</td>
+        <td>4687b4be</td>
+      </tr>
+      <tr>
+        <td>R7C3c</td>
+        <td>ef8b61c3</td>
+      </tr>
+      <tr>
+        <td>R7C4a</td>
+        <td>57f2b3da</td>
+      </tr>
+      <tr>
+        <td>R7C4b</td>
+        <td>3833ad6e</td>
+      </tr>
+      <tr>
+        <td>R7C4c</td>
+        <td>ff56df91</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<h1>Metallic paints</h1>
+<p>&nbsp;</p>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Hex ID</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>M_R1C1a</td>
+        <td>21a5a4f8</td>
+      </tr>
+      <tr>
+        <td>M_R1C2a</td>
+        <td>888c41d6</td>
+      </tr>
+      <tr>
+        <td>M_R1C3a</td>
+        <td>b371d0b4</td>
+      </tr>
+      <tr>
+        <td>M_R1C4a</td>
+        <td>330d67b1</td>
+      </tr>
+      <tr>
+        <td>M_R2C1a</td>
+        <td>ae79029a</td>
+      </tr>
+      <tr>
+        <td>M_R2C2a</td>
+        <td>d22385e4</td>
+      </tr>
+      <tr>
+        <td>M_R2C3a</td>
+        <td>91319b86</td>
+      </tr>
+      <tr>
+        <td>M_R2C4a</td>
+        <td>7fe5daa1</td>
+      </tr>
+      <tr>
+        <td>M_R3C1a</td>
+        <td>75931881</td>
+      </tr>
+      <tr>
+        <td>M_R3C2a</td>
+        <td>5dcff588</td>
+      </tr>
+      <tr>
+        <td>M_R3C3a</td>
+        <td>e4f6a7ee</td>
+      </tr>
+      <tr>
+        <td>M_R3C4a</td>
+        <td>a670bfec</td>
+      </tr>
+      <tr>
+        <td>M_R3C5a</td>
+        <td>e3ea8694</td>
+      </tr>
+      <tr>
+        <td>M_R3C6a</td>
+        <td>067b525a</td>
+      </tr>
+      <tr>
+        <td>M_R4C1a</td>
+        <td>98107962</td>
+      </tr>
+      <tr>
+        <td>M_R4C2a</td>
+        <td>6d5cd2fb</td>
+      </tr>
+      <tr>
+        <td>M_R4C3a</td>
+        <td>6ee6b8ac</td>
+      </tr>
+      <tr>
+        <td>M_R4C4a</td>
+        <td>760b1481</td>
+      </tr>
+      <tr>
+        <td>M_R4C5a</td>
+        <td>1ff76bf4</td>
+      </tr>
+      <tr>
+        <td>M_R4C6a</td>
+        <td>88d9cd62</td>
+      </tr>
+      <tr>
+        <td>M_R4C7a</td>
+        <td>19811fee</td>
+      </tr>
+      <tr>
+        <td>M_R5C1a</td>
+        <td>ba0a03a7</td>
+      </tr>
+      <tr>
+        <td>M_R5C2a</td>
+        <td>b46ffa08</td>
+      </tr>
+      <tr>
+        <td>M_R5C3a</td>
+        <td>f93ccd98</td>
+      </tr>
+      <tr>
+        <td>M_R5C4a</td>
+        <td>71ff6731</td>
+      </tr>
+      <tr>
+        <td>M_R5C5a</td>
+        <td>39be221a</td>
+      </tr>
+      <tr>
+        <td>M_R5C6a</td>
+        <td>51c1bf6c</td>
+      </tr>
+      <tr>
+        <td>M_R6C1a</td>
+        <td>edb095dd</td>
+      </tr>
+      <tr>
+        <td>M_R6C2a</td>
+        <td>cbd642fb</td>
+      </tr>
+      <tr>
+        <td>M_R6C3a</td>
+        <td>929aa305</td>
+      </tr>
+      <tr>
+        <td>M_R6C4a</td>
+        <td>9581af61</td>
+      </tr>
+      <tr>
+        <td>M_R6C5a</td>
+        <td>5924d5a7</td>
+      </tr>
+      <tr>
+        <td>M_R7C1a</td>
+        <td>f3a812cb</td>
+      </tr>
+      <tr>
+        <td>M_R7C2a</td>
+        <td>c5bae741</td>
+      </tr>
+      <tr>
+        <td>M_R7C3a</td>
+        <td>51646b9e</td>
+      </tr>
+      <tr>
+        <td>M_R7C4a</td>
+        <td>36dd7265</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<h1>Pearlescent paints</h1>
+<p>&nbsp;</p>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Hex ID</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>P_R1C1a</td>
+        <td>1588fbd0</td>
+      </tr>
+      <tr>
+        <td>P_R1C2a</td>
+        <td>df57bce2</td>
+      </tr>
+      <tr>
+        <td>P_R1C3a</td>
+        <td>00d33b98</td>
+      </tr>
+      <tr>
+        <td>P_R1C4a</td>
+        <td>53ce46b8</td>
+      </tr>
+      <tr>
+        <td>P_R2C1a</td>
+        <td>582bc890</td>
+      </tr>
+      <tr>
+        <td>P_R2C1a</td>
+        <td>449d3fa8</td>
+      </tr>
+      <tr>
+        <td>P_R2C3a</td>
+        <td>f92b0e3f</td>
+      </tr>
+      <tr>
+        <td>P_R2C4a</td>
+        <td>cc72eebf</td>
+      </tr>
+      <tr>
+        <td>P_R2C5a</td>
+        <td>42ea5daa</td>
+      </tr>
+      <tr>
+        <td>P_R3C1a</td>
+        <td>5ffd5127</td>
+      </tr>
+      <tr>
+        <td>P_R3C2a</td>
+        <td>ea3c10c1</td>
+      </tr>
+      <tr>
+        <td>P_R3C3a</td>
+        <td>cefab163</td>
+      </tr>
+      <tr>
+        <td>P_R3C4a</td>
+        <td>cc3d6642</td>
+      </tr>
+      <tr>
+        <td>P_R3C5a</td>
+        <td>ebd2d634</td>
+      </tr>
+      <tr>
+        <td>P_R3C6a</td>
+        <td>3f1eb456</td>
+      </tr>
+      <tr>
+        <td>P_R4C1a</td>
+        <td>4bbc978a</td>
+      </tr>
+      <tr>
+        <td>P_R4C2a</td>
+        <td>ee1537d1</td>
+      </tr>
+      <tr>
+        <td>P_R4C3a</td>
+        <td>797b7713</td>
+      </tr>
+      <tr>
+        <td>P_R4C4a</td>
+        <td>456cc606</td>
+      </tr>
+      <tr>
+        <td>P_R4C5a</td>
+        <td>08ae4401</td>
+      </tr>
+      <tr>
+        <td>P_R4C6a</td>
+        <td>eda9df63</td>
+      </tr>
+      <tr>
+        <td>P_R4C7a</td>
+        <td>e9162aa9</td>
+      </tr>
+      <tr>
+        <td>P_R5C1a</td>
+        <td>ce48b1e7</td>
+      </tr>
+      <tr>
+        <td>P_R5C2a</td>
+        <td>906348b1</td>
+      </tr>
+      <tr>
+        <td>P_R5C3a</td>
+        <td>6dae57f7</td>
+      </tr>
+      <tr>
+        <td>P_R5C4a</td>
+        <td>2cccd1a9</td>
+      </tr>
+      <tr>
+        <td>P_R5C5a</td>
+        <td>7962897d</td>
+      </tr>
+      <tr>
+        <td>P_R5C6a</td>
+        <td>cc6d5740</td>
+      </tr>
+      <tr>
+        <td>P_R6C1a</td>
+        <td>40b1f561</td>
+      </tr>
+      <tr>
+        <td>P_R6C2a</td>
+        <td>a8e43ee8</td>
+      </tr>
+      <tr>
+        <td>P_R6C3a</td>
+        <td>57012324</td>
+      </tr>
+      <tr>
+        <td>P_R6C4a</td>
+        <td>8f9f6bf9</td>
+      </tr>
+      <tr>
+        <td>P_R6C5a</td>
+        <td>a372c3f1</td>
+      </tr>
+      <tr>
+        <td>P_R7C1a</td>
+        <td>73e0b3c3</td>
+      </tr>
+      <tr>
+        <td>P_R7C2a</td>
+        <td>0549c945</td>
+      </tr>
+      <tr>
+        <td>P_R7C3a</td>
+        <td>6c862b20</td>
+      </tr>
+      <tr>
+        <td>P_R7C4a</td>
+        <td>1fbbe485</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<h1>Candy paints</h1>
+<p>&nbsp;</p>
+<figure class="table">
+  <table>
+    <tbody>
+      <tr>
+        <td>Name</td>
+        <td>Hex ID</td>
+      </tr>
+      <tr>
+        <td>C_R1C1a</td>
+        <td>c9c99c99</td>
+      </tr>
+      <tr>
+        <td>C_R1C2a</td>
+        <td>9ddded3c</td>
+      </tr>
+      <tr>
+        <td>C_R1C3a</td>
+        <td>712a76ee</td>
+      </tr>
+      <tr>
+        <td>C_R1C4a</td>
+        <td>960f9a03</td>
+      </tr>
+      <tr>
+        <td>C_R2C1a</td>
+        <td>5e841334</td>
+      </tr>
+      <tr>
+        <td>C_R2C2a</td>
+        <td>d89bc83d</td>
+      </tr>
+      <tr>
+        <td>C_R2C3a</td>
+        <td>0597a0ab</td>
+      </tr>
+      <tr>
+        <td>C_R2C4a</td>
+        <td>f51d018f</td>
+      </tr>
+      <tr>
+        <td>C_R2C5a</td>
+        <td>ea7dcebc</td>
+      </tr>
+      <tr>
+        <td>C_R3C1a</td>
+        <td>8cd78c71</td>
+      </tr>
+      <tr>
+        <td>C_R3C2a</td>
+        <td>58982e6c</td>
+      </tr>
+      <tr>
+        <td>C_R3C3a</td>
+        <td>d673269a</td>
+      </tr>
+      <tr>
+        <td>C_R3C4a</td>
+        <td>dcdea962</td>
+      </tr>
+      <tr>
+        <td>C_R3C6a</td>
+        <td>8af5da0e</td>
+      </tr>
+      <tr>
+        <td>C_R4C1a</td>
+        <td>546355b3</td>
+      </tr>
+      <tr>
+        <td>C_R4C2a</td>
+        <td>913895b2</td>
+      </tr>
+      <tr>
+        <td>C_R4C3a</td>
+        <td>ea2d4a6c</td>
+      </tr>
+      <tr>
+        <td>C_R4C4a</td>
+        <td>a6b6e265</td>
+      </tr>
+      <tr>
+        <td>C_R4C5a</td>
+        <td>f005b5dd</td>
+      </tr>
+      <tr>
+        <td>C_R4C6a</td>
+        <td>9aa890cb</td>
+      </tr>
+      <tr>
+        <td>C_R4C7a</td>
+        <td>a01ebf38</td>
+      </tr>
+      <tr>
+        <td>C_R5C1a</td>
+        <td>0d9e6b9b</td>
+      </tr>
+      <tr>
+        <td>C_R5C2a</td>
+        <td>8035baba</td>
+      </tr>
+      <tr>
+        <td>C_R5C3a</td>
+        <td>15433cda</td>
+      </tr>
+      <tr>
+        <td>C_R5C4a</td>
+        <td>3c93242c</td>
+      </tr>
+      <tr>
+        <td>C_R5C5a</td>
+        <td>74c6547f</td>
+      </tr>
+      <tr>
+        <td>C_R5C6a</td>
+        <td>6b6508a4</td>
+      </tr>
+      <tr>
+        <td>C_R6C1a</td>
+        <td>20620bf3</td>
+      </tr>
+      <tr>
+        <td>C_R6C2a</td>
+        <td>485590e1</td>
+      </tr>
+      <tr>
+        <td>C_R6C3a</td>
+        <td>8ae04acf</td>
+      </tr>
+      <tr>
+        <td>C_R6C4a</td>
+        <td>c9028cc6</td>
+      </tr>
+      <tr>
+        <td>C_R6C5a</td>
+        <td>f324f08d</td>
+      </tr>
+      <tr>
+        <td>C_R7C1a</td>
+        <td>2915bd49</td>
+      </tr>
+      <tr>
+        <td>C_R7C2a</td>
+        <td>3b259614</td>
+      </tr>
+      <tr>
+        <td>C_R7C3a</td>
+        <td>4d7a33a3</td>
+      </tr>
+      <tr>
+        <td>C_R7C4a</td>
+        <td>fa23b4c1</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<h1>Car-specific paints</h1>
+<p>&nbsp;</p>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Hex ID</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>ACSchnitzer_ACS1Coupe_Stock</td>
+        <td>e5fcd214</td>
+      </tr>
+      <tr>
+        <td>Audi_R8V10_Stock</td>
+        <td>88df8805</td>
+      </tr>
+      <tr>
+        <td>Audi_S3_Stock</td>
+        <td>fbe467b4</td>
+      </tr>
+      <tr>
+        <td>Audi_TT_Stock</td>
+        <td>ebb79cc6</td>
+      </tr>
+      <tr>
+        <td>BMW_1SeriesTii_Race</td>
+        <td>18be0899</td>
+      </tr>
+      <tr>
+        <td>BMW_M3E92_Drift</td>
+        <td>c8c17f9c</td>
+      </tr>
+      <tr>
+        <td>BMW_M3E92_Tuner</td>
+        <td>ad93a111</td>
+      </tr>
+      <tr>
+        <td>BMW_X548MSport_Stock</td>
+        <td>c18c8526</td>
+      </tr>
+      <tr>
+        <td>Chevrolet_CamaroSS_Drag</td>
+        <td>f170254e</td>
+      </tr>
+      <tr>
+        <td>Chevrolet_CamaroSS_Stock</td>
+        <td>17c51d15</td>
+      </tr>
+      <tr>
+        <td>Corvette_C3_Drag</td>
+        <td>adbce90d</td>
+      </tr>
+      <tr>
+        <td>Corvette_C3_Race</td>
+        <td>7a2189a8</td>
+      </tr>
+      <tr>
+        <td>Corvette_ZR1_Stock</td>
+        <td>3eb52f4b</td>
+      </tr>
+      <tr>
+        <td>Dodge_Challenger_Race</td>
+        <td>92ead224</td>
+      </tr>
+      <tr>
+        <td>Dodge_Challenger_Stock</td>
+        <td>bf23bb4b</td>
+      </tr>
+      <tr>
+        <td>Dodge_Challenger_Stock</td>
+        <td>256d3f74</td>
+      </tr>
+      <tr>
+        <td>Dodge_ViperACR_Stock</td>
+        <td>b6adaccd</td>
+      </tr>
+      <tr>
+        <td>Dodge_ViperGTSR_Stock</td>
+        <td>8eab9526</td>
+      </tr>
+      <tr>
+        <td>Foose_69_Stock</td>
+        <td>c70890db</td>
+      </tr>
+      <tr>
+        <td>Ford_F150_OffRoad</td>
+        <td>59a1c21f</td>
+      </tr>
+      <tr>
+        <td>Ford_FocusRS_Race</td>
+        <td>e1293f23</td>
+      </tr>
+      <tr>
+        <td>Ford_FocusRS_Race</td>
+        <td>b2b4aaec</td>
+      </tr>
+      <tr>
+        <td>Ford_FocusRS_Stock</td>
+        <td>2b35442e</td>
+      </tr>
+      <tr>
+        <td>Ford_FR100_Offroad</td>
+        <td>60247bf8</td>
+      </tr>
+      <tr>
+        <td>Ford_FR100_Stock</td>
+        <td>f4acf168</td>
+      </tr>
+      <tr>
+        <td>Ford_FR100_Stock</td>
+        <td>0d7a8896</td>
+      </tr>
+      <tr>
+        <td>Ford_MustangGTR_Stock</td>
+        <td>fc03a102</td>
+      </tr>
+      <tr>
+        <td>Ford_MustangGTR_Stock</td>
+        <td>a19f8171</td>
+      </tr>
+      <tr>
+        <td>LandRover_LRX_Stock</td>
+        <td>6e522679</td>
+      </tr>
+      <tr>
+        <td>Lotus_ExigeCup260_Stock</td>
+        <td>ae450506</td>
+      </tr>
+      <tr>
+        <td>M3_Drift</td>
+        <td>969714fc</td>
+      </tr>
+      <tr>
+        <td>Matte Rat</td>
+        <td>b3ddf058</td>
+      </tr>
+      <tr>
+        <td>Mazda_RX8_Tuner</td>
+        <td>28e0f38b</td>
+      </tr>
+      <tr>
+        <td>Nemesis_Black</td>
+        <td>c37ed8b4</td>
+      </tr>
+      <tr>
+        <td>Nissan_350Z_Drift</td>
+        <td>9016e03b</td>
+      </tr>
+      <tr>
+        <td>Nissan_Navara_OffRoad</td>
+        <td>d0356323</td>
+      </tr>
+      <tr>
+        <td>Nissan_Navara_Rat</td>
+        <td>819b3815</td>
+      </tr>
+      <tr>
+        <td>Nissan_SkylineR34ZTune_Stock</td>
+        <td>78ea6afe</td>
+      </tr>
+      <tr>
+        <td>Opel_AstraExtreme_Stock</td>
+        <td>75063fd7</td>
+      </tr>
+      <tr>
+        <td>Toyota_Supra_Smooth</td>
+        <td>e31ccb98</td>
+      </tr>
+      <tr>
+        <td>Vauxhall_MonaroVXR_Drift</td>
+        <td>fe7beaa2</td>
+      </tr>
+      <tr>
+        <td>Volkswagen_Beetle_Rat</td>
+        <td>94eb143c</td>
+      </tr>
+      <tr>
+        <td>Volkswagen_Beetle_Rat</td>
+        <td>1109376c</td>
+      </tr>
+      <tr>
+        <td>Volkswagen_GolfW12650_Stock</td>
+        <td>35f323a3</td>
+      </tr>
+      <tr>
+        <td>Volkswagen_Scirocco_24</td>
+        <td>0db82355</td>
+      </tr>
+      <tr>
+        <td>Yellow_Trophy</td>
+        <td>2d351003</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<h1>Special paints</h1>
+<p>&nbsp;</p>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Hex ID</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Bronze</td>
+        <td>72c34685</td>
+      </tr>
+      <tr>
+        <td>Canal_Blue</td>
+        <td>d80e130d</td>
+      </tr>
+      <tr>
+        <td>Canal_Blue</td>
+        <td>34bd6133</td>
+      </tr>
+      <tr>
+        <td>Canal_Blue</td>
+        <td>be758170</td>
+      </tr>
+      <tr>
+        <td>Canal_Blue</td>
+        <td>5dfc21ed</td>
+      </tr>
+      <tr>
+        <td>Chrome</td>
+        <td>62ad3b62</td>
+      </tr>
+      <tr>
+        <td>Default</td>
+        <td>71ad7e3d</td>
+      </tr>
+      <tr>
+        <td>Ford Blue</td>
+        <td>430c58e5</td>
+      </tr>
+      <tr>
+        <td>Gloss Black</td>
+        <td>0cf69316</td>
+      </tr>
+      <tr>
+        <td>Gloss Black</td>
+        <td>5f825b2c</td>
+      </tr>
+      <tr>
+        <td>Gold</td>
+        <td>5eb188c1</td>
+      </tr>
+      <tr>
+        <td>Green/Blue/Purple Pearlescent</td>
+        <td>2b2fa09c</td>
+      </tr>
+      <tr>
+        <td>Green/Blue/Purple Pearlescent</td>
+        <td>b57520bd</td>
+      </tr>
+      <tr>
+        <td>Metallic Gold</td>
+        <td>d61b7d77</td>
+      </tr>
+      <tr>
+        <td>Metallic Red</td>
+        <td>531e9bc2</td>
+      </tr>
+      <tr>
+        <td>Metallic Silver</td>
+        <td>2205ed0a</td>
+      </tr>
+      <tr>
+        <td>Metallic Silver</td>
+        <td>fc143e3c</td>
+      </tr>
+      <tr>
+        <td>Metallic Silver</td>
+        <td>aed69a92</td>
+      </tr>
+      <tr>
+        <td>Metallic Silver</td>
+        <td>782dd6b3</td>
+      </tr>
+      <tr>
+        <td>Metallic Silver</td>
+        <td>3e312df9</td>
+      </tr>
+      <tr>
+        <td>Metallic Silver Bright</td>
+        <td>d51a30b4</td>
+      </tr>
+      <tr>
+        <td>Picker_Black</td>
+        <td>8c2d41e9</td>
+      </tr>
+      <tr>
+        <td>Pueblo gold</td>
+        <td>b90ac3ab</td>
+      </tr>
+      <tr>
+        <td>Red</td>
+        <td>159fd782</td>
+      </tr>
+      <tr>
+        <td>Red</td>
+        <td>689265bc</td>
+      </tr>
+      <tr>
+        <td>Red/Orange Pearlescent</td>
+        <td>4228c17a</td>
+      </tr>
+      <tr>
+        <td>Rin Gold</td>
+        <td>9948d32d</td>
+      </tr>
+      <tr>
+        <td>Silver</td>
+        <td>d5eca10e</td>
+      </tr>
+      <tr>
+        <td>Very Green</td>
+        <td>22757b57</td>
+      </tr>
+      <tr>
+        <td>Very Green</td>
+        <td>90d28780</td>
+      </tr>
+      <tr>
+        <td>White</td>
+        <td>2e9e9d29</td>
+      </tr>
+      <tr>
+        <td>White</td>
+        <td>4edd8287</td>
+      </tr>
+      <tr>
+        <td>White</td>
+        <td>7b1709b4</td>
+      </tr>
+      <tr>
+        <td>Yellow</td>
+        <td>e72be59d</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<h1>Paint data struct:</h1>
+<pre><code class="language-javascript">  [{
+  "type": "VEH_PaintJob",
+  "local_index": 0,
+  "global_id": 16461998,
+  "global_id_hex": "ae30fb00",
+  "data": {
+    "name": {
+      "read_type": 0,
+      "atom_type": "sz8",
+      "hex": "00000000",
+      "value": 0,
+      "string_value": "R5C2a"
+    },
+    "undercoatColour": {
+      "read_type": 3,
+      "values": {
+        "type": "Rgb",
+        "r": {
+          "type": "f32",
+          "value": "3333b33e"
+        },
+        "g": {
+          "type": "f32",
+          "value": "3333b33e"
+        },
+        "b": {
+          "type": "f32",
+          "value": "3333b33e"
+        }
+      }
+    },
+    "scuffColour": {
+      "read_type": 3,
+      "values": {
+        "type": "Rgb",
+        "r": {
+          "type": "f32",
+          "value": "cdcc4c3e"
+        },
+        "g": {
+          "type": "f32",
+          "value": "cdcc4c3e"
+        },
+        "b": {
+          "type": "f32",
+          "value": "cdcc4c3e"
+        }
+      }
+    },
+    "colours": {
+      "read_type": 259,
+      "hex": "01000000",
+      "num1": 1,
+      "count": 2,
+      "values_0": {
+        "type": "Rgb",
+        "r": {
+          "type": "f32",
+          "value": "c3f5283f"
+        },
+        "g": {
+          "type": "f32",
+          "value": "0000803f"
+        },
+        "b": {
+          "type": "f32",
+          "value": "c3f5a83e"
+        }
+      },
+      "values_1": {
+        "type": "Rgb",
+        "r": {
+          "type": "f32",
+          "value": "bc3dc83e"
+        },
+        "g": {
+          "type": "f32",
+          "value": "a7e7153f"
+        },
+        "b": {
+          "type": "f32",
+          "value": "ca334f3e"
+        }
+      }
+    },
+    "colourCurve": {
+      "read_type": 5,
+      "hex": "b1000000",
+      "value": 177
+    },
+    "reflectivityCurve": {
+      "read_type": 5,
+      "hex": "64000000",
+      "value": 100
+    }
+  }
+},
+{
+  "type": "VEH_Curve",
+  "local_index": 2,
+  "global_id": 36636041,
+  "global_id_hex": "89052f02",
+  "data": {
+    "keyFrames": {
+      "read_type": 259,
+      "hex": "01000000",
+      "num1": 1,
+      "count": 3,
+      "values_0": {
+        "type": "VEH_HermiteKeyFrame",
+        "time": {
+          "type": "f32",
+          "value": "00000000"
+        },
+        "value": {
+          "type": "f32",
+          "value": "00000000"
+        },
+        "inTangent": {
+          "type": "f32",
+          "value": "00000000"
+        },
+        "outTangent": {
+          "type": "f32",
+          "value": "ac01bcbf"
+        }
+      },
+      "values_1": {
+        "type": "VEH_HermiteKeyFrame",
+        "time": {
+          "type": "f32",
+          "value": "18b4c03e"
+        },
+        "value": {
+          "type": "f32",
+          "value": "c1c7603d"
+        },
+        "inTangent": {
+          "type": "f32",
+          "value": "574dbe40"
+        },
+        "outTangent": {
+          "type": "f32",
+          "value": "fcb51b42"
+        }
+      },
+      "values_2": {
+        "type": "VEH_HermiteKeyFrame",
+        "time": {
+          "type": "f32",
+          "value": "0000803f"
+        },
+        "value": {
+          "type": "f32",
+          "value": "0000803f"
+        },
+        "inTangent": {
+          "type": "f32",
+          "value": "5cee9642"
+        },
+        "outTangent": {
+          "type": "f32",
+          "value": "00000000"
+        }
+      }
+    }
+  }
+}]</code></pre>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
