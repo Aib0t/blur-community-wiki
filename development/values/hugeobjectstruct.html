@@ -2,7 +2,7 @@
 title: Huge Object Struct
 description: Memory struct that contrains references to all objects used by the game engine
 published: true
-date: 2021-09-04T14:12:48.928Z
+date: 2021-09-04T14:22:35.966Z
 tags: 
 editor: ckeditor
 dateCreated: 2021-09-04T14:12:48.928Z
@@ -11,4 +11,13 @@ dateCreated: 2021-09-04T14:12:48.928Z
 <blockquote>
   <p>Researched by _mRally2#1167</p>
 </blockquote>
+<p>The struct follows this scheme:</p>
+<pre><code class="language-plaintext">01 00 * 00 * 00 00 00 + UNK REFERENCE + OBJECT ID + OBJECT TYPE REFERENCE</code></pre>
+<p>Where:</p>
+<ul>
+  <li><strong>UNK REFERENCE:</strong> Unknown reference of other data type</li>
+  <li><strong>OBJECT ID:</strong> The object id used by the game’s database to identify it</li>
+  <li><strong>OBJECT TYPE REFERENCE:</strong> Used to reference all objects part of a single class</li>
+  <li><strong>* :</strong> Wildcard. Can be multiple values. Unknown as of now what is its actual meaning</li>
+</ul>
 <p>&nbsp;</p>
