@@ -2,7 +2,7 @@
 title: Huge Object Struct
 description: Memory struct that contrains references to all objects used by the game engine
 published: true
-date: 2021-09-04T14:44:57.254Z
+date: 2021-09-04T14:58:59.262Z
 tags: 
 editor: ckeditor
 dateCreated: 2021-09-04T14:12:48.928Z
@@ -62,4 +62,12 @@ dateCreated: 2021-09-04T14:12:48.928Z
     &lt;/CheatEntry&gt;
   &lt;/CheatEntries&gt;
 &lt;/CheatTable&gt;</code></pre>
-<p>&nbsp;</p>
+<h1>How to search for all objects of a type in CE</h1>
+<p>All that is going to be explained here needs a lot of concentration and attention. You have been warned.</p>
+<p>Let’s say you want to change the environment skybox from the Barcelona Oval track. You would have to search for the Environment Override ID of the track first. The correct memory region must look like this.</p>
+<figure class="image"><img src="/assets/object_struct/unknown.png"></figure>
+<ul>
+  <li><strong>BLUE</strong>: Environment Override ID</li>
+  <li><strong>RED</strong>: Environment Skybox Object Reference</li>
+  <li><strong>GREEN</strong>: Environment Lighting Object Reference</li>
+</ul>
