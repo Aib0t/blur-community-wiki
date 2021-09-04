@@ -2,7 +2,7 @@
 title: Huge Object Struct
 description: Memory struct that contrains references to all objects used by the game engine
 published: true
-date: 2021-09-04T15:17:47.484Z
+date: 2021-09-04T15:22:36.847Z
 tags: 
 editor: ckeditor
 dateCreated: 2021-09-04T14:12:48.928Z
@@ -69,11 +69,11 @@ dateCreated: 2021-09-04T14:12:48.928Z
 <figure class="image"><img src="/assets/object_struct/unknown1.png"></figure>
 <p>Then you have to “build” the signature of the object type. Take the first 8 bytes of the start of the object reference which is <code>01 00 01 00 01 00 00 00 * * * * * * * *</code> and add whatever is next to the ID you searched for, i.e, <code>40 19 61 0A</code>.</p>
 <p>You must end up with this: <code>01 00 01 00 01 00 00 00 * * * * * * * * 40 19 61 0A</code></p>
+<blockquote>
+  <p><strong>NOTE: 40 19 61 0A is a memory address, is gonna change every time you restart the game, so you will have to redo the process all over again</strong></p>
+</blockquote>
+<p>After building the AOB, you must search for it in CE. You must get something around 87 results. Now, select all the results and drag them into the address list by clicking in the red arrow button. Once done, copy all addresses from the address list and paste them into a text editor, preferebly Visual Studio Code or similar.</p>
 <p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p><i>[</i>9:38 AM<i>]</i></p>
-<p>so you build something like this 01 00 01 00 01 00 00 00 * * * * * * * *40 19 61 0A</p>
 <h1>How to swap objects by reference in CE</h1>
 <p>Let’s say you want to change the environment skybox from the Barcelona Oval track. You would have to search for the Environment Override ID of the track first as Array of Bytes. The correct memory region must look like this.</p>
 <figure class="image"><img src="/assets/object_struct/unknown.png"></figure>
