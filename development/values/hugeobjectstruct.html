@@ -2,7 +2,7 @@
 title: Huge Object Struct
 description: Memory struct that contrains references to all objects used by the game engine
 published: true
-date: 2021-09-04T14:39:00.455Z
+date: 2021-09-04T14:41:40.201Z
 tags: 
 editor: ckeditor
 dateCreated: 2021-09-04T14:12:48.928Z
@@ -26,9 +26,9 @@ dateCreated: 2021-09-04T14:12:48.928Z
 <p>Here we have an example of how it looks like in memory using Cheat Engine and also where it is used. As we can see, all values follow the same structure as detailed above. All of these begin at the address (RealAddress) where they are being referenced lated on in all of the game internal json files (blueprints).</p>
 <p>At the same time we can gather this info from them:</p>
 <ul>
-  <li>Object with ID C3 00 DD 58 is of type 60 C6 61 0A which in total there are 221 occurences in the entire struct, therefore 221 objects of that type</li>
-  <li>Object with ID 44 B7 E9 58 is of type A0 C5 61 0A which in total there are 393 occurences in the entire struct, therefore 393 objects of that type</li>
-  <li>Object with ID 09 C3 F9 58 is of type 80 2E 62 0A which in total there are 286 occurences in the entire struct, therefore 286 objects of that type</li>
+  <li>Object with ID C3 00 DD 58 is of type 60 C6 61 0A. Has 221 occurences in the entire struct. The object is referenced at 0x0A6891F4</li>
+  <li>Object with ID 44 B7 E9 58 is of type A0 C5 61 0A. Has 393 occurences in the entire struct. The object is referenced at 0x0A689208</li>
+  <li>Object with ID 09 C3 F9 58 is of type 80 2E 62 0A. Has 286 occurences in the entire struct. The object is referenced at 0x0A68921C</li>
 </ul>
 <pre><code class="language-plaintext">&lt;?xml version="1.0" encoding="utf-8"?&gt;
 &lt;CheatTable&gt;
