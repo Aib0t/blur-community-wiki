@@ -1,8 +1,8 @@
 <!--
-title: Huge Object Struct
+title: Internal Object Struct
 description: Memory struct that contrains references to all objects used by the game engine
 published: true
-date: 2021-09-04T15:34:21.516Z
+date: 2021-09-06T21:02:48.850Z
 tags: 
 editor: ckeditor
 dateCreated: 2021-09-04T14:12:48.928Z
@@ -17,9 +17,9 @@ dateCreated: 2021-09-04T14:12:48.928Z
 <p>Where:</p>
 <ul>
   <li><strong>UNK REFERENCE:</strong> Unknown reference possibly to another data type</li>
-  <li><strong>OBJECT ID:</strong> The object id used by the game’s database to identify it</li>
-  <li><strong>OBJECT TYPE REFERENCE:</strong> Used to reference all objects part of a single class</li>
-  <li><strong>* :</strong> Wildcard. Can be multiple values. Unknown as of now what is its actual meaning</li>
+  <li><strong>OBJECT ID:</strong> The object ID used by the game’s database to identify it</li>
+  <li><strong>OBJECT TYPE REFERENCE:</strong> Used to reference all objects of a single class</li>
+  <li><strong>* [WILDCARD]:</strong> Can be multiple values. Unknown as of now what it actual meaning is</li>
 </ul>
 <h1>Brief example</h1>
 <p>Here we have an example of how it looks like in memory using Cheat Engine and also where it is used. As we can see, all values follow the same structure as detailed above. All of these begin at the address (RealAddress) where they are being referenced lated on in all of the game internal json files (blueprints).</p>
