@@ -2,7 +2,7 @@
 title: Internal Object Struct
 description: Memory struct that contrains references to all objects used by the game engine
 published: true
-date: 2021-09-06T21:07:00.476Z
+date: 2021-09-06T21:24:19.208Z
 tags: 
 editor: ckeditor
 dateCreated: 2021-09-04T14:12:48.928Z
@@ -75,7 +75,7 @@ dateCreated: 2021-09-04T14:12:48.928Z
 <p>Now in order to swap the objects you just need to do a few steps. Search for its ID in the text editor, copy the address where it is located in the object struct and finally paste it into the address where it holds the reference (see next chapter).</p>
 <figure class="image"><img src="/assets/object_struct/unknown_(1).png"></figure>
 <h1>How to swap objects by reference in CE</h1>
-<p>Let’s say you want to change the environment skybox from the Barcelona Oval track. You would have to search for the Environment Override ID of the track first as Array of Bytes. The correct memory region must look like this.</p>
+<p>Let’s continue with the environment skybox swap from the Barcelona Oval track. You have to search for the Environment Override ID of the track first as Array of Bytes. The correct memory region must look like this:</p>
 <figure class="image"><img src="/assets/object_struct/unknown.png"></figure>
 <ul>
   <li><strong>BLUE</strong>: Environment Override ID</li>
